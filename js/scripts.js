@@ -1,5 +1,3 @@
-// alert('Hello world');//
-
 // INITIAL CODE (EXERCISE 1.1)
         // let myName = 'Bob';
         // document.write(myName);
@@ -67,5 +65,5 @@
         // let minSize = (doubleSize * 2) - (size / 2);
         // document.write(minSize);
 
-
+alert('Hello world');
 
