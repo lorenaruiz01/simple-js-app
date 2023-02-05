@@ -67,3 +67,7 @@
 
 alert('Hello world');
 
+// create a variable named favoriteFood and assign it a value of your choice.
+    let favortiveFood = 'pizza';
+// Use document.write() to display what’s stored in the favoriteFood variable on the index page.
+    document.write(favortiveFood);
