@@ -36,4 +36,20 @@
 // alert(myName);
 
 
-            
+// COMMENTS
+// There are two types of comments in JavaScript: single-line comments and multi-line comments. You use forward slashes for both. Take a look at some examples below:
+
+javascript
+// Note: We didn’t capitalize the title as this fits our style better
+let title = 'this is the title';
+
+/* This is a longer comment.
+It might explain, in detail, why we made a certain decision.
+Or, it could show examples about how to use the following code snippet. */
+
+let title2 = 'Hello!'; // Everything after the slashes is ignored
+
+// *** comments are generally written before the piece of code they reference
+
+let simpleAddition = 2 + 2;
+document.write(simpleAddition);
