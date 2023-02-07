@@ -1,4 +1,4 @@
-# simple-js-app
+# Work In Progress: simple-js-app
 
 ## Project Outline 
 1. Project description
