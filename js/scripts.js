@@ -5,7 +5,11 @@ let pokemonList = [
         {name: 'Jigglypuff', height: 0.5, types:['fairy', 'normal'] }
 ];
 
+// `for` LOOP
 for (let i = 0; i < pokemonList.length; i++){
         document.write(name + " " + height + "m")
 }
 
+// CONDITIONAL
+let result = height > 1 ? : 'That\'s a big pokmemon!' : 'what a cute pokemon!';
+        console.log (result);
