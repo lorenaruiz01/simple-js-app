@@ -6,8 +6,9 @@ let pokemonList = [
 ];
 
 // `for` LOOP
-for (let i = [0]; i < pokemonList.length; i++) {
-        document.write(name[0] + " " + height[1] + "m");
+for (let i = 0; i < pokemonList.length; i++) {
+        console.log(name);
+        //document.write(name[i] + " is" + height[i] + "m tall");
 }
 
 // CONDITIONAL
