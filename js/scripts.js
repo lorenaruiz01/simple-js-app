@@ -7,9 +7,10 @@ let pokemonList = [
 
 // `for` LOOP
 for (let i = 0; i < pokemonList.length; i++){
-        document.write(name + " " + height + "m")
+        document.write(name[i] + " " + height[i] + "m");
 }
 
 // CONDITIONAL
-let result = height > 1 ? : 'That\'s a big pokmemon!' : 'what a cute pokemon!';
+let height = 1
+let result = height < 1 ? : 'That\'s a big pokmemon!' : 'what a cute pokemon!';
         console.log (result);
