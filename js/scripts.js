@@ -6,8 +6,8 @@ let pokemonList = [
 ];
 for (let i = 0; i < pokemonList.length; i++) {
         document.write(name[i]+ " is" + height[i] + "m tall");
-        let height = x 
-        if (x > 1 ) {
+        let height = a 
+        if (a > 1 ) {
                 document.write('That is a big pokemon!');
         }
 }
