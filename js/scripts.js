@@ -12,6 +12,6 @@ for (let i = 0; i < pokemonList.length; i++) {
 }
 
 // CONDITIONAL
-let height = 1
-let result = height > 1 ? 'That\'s a big pokmemon!' : 'What a cute pokemon!';
-        console.log (result);
+// let height = 1
+// let result = height > 1 ? 'That\'s a big pokmemon!' : 'What a cute pokemon!';
+//         console.log (result);
