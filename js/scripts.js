@@ -6,7 +6,7 @@ let pokemonList = [
 ];
 for (let i = 0; i < pokemonList.length; i++) {
        const pokemon = pokemonList [i]
-        document.write(pokemon.name[i]+ " is" + pokemon.height + "m tall");
+        document.write(pokemon.name[i]+ " is " + pokemon.height + "m tall");
        if (height[1] > 1) {
                 document.write('That is a big pokemon!');
         }
