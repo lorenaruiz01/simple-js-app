@@ -6,6 +6,11 @@ let pokemonList = [
         { name: 'Jigglypuff', height: 0.5, types:['fairy', 'normal']}
 ];
 
+})()
+
+let pokemonRepository = 
+//working through Task Part 2, Number 2
+
 
 // for (let i = 0; i < pokemonList.length; i++) {
 //         const pokemon = pokemonList[i]
@@ -21,4 +26,3 @@ function myLoopFunction(pokemon) {
       pokemonList.forEach(myLoopFunction);
 
 
-})()
