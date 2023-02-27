@@ -12,3 +12,8 @@ let pokemonList = [
 //                  document.write("That is a big pokemon!")
 //          };
 //  }
+
+function myLoopFunction(pokemon) {
+        console.log(pokemon.name + " is " + pokemon.height + "m tall");
+      }
+      pokemonList.forEach(myLoopFunction);
