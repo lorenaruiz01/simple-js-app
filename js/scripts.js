@@ -9,7 +9,7 @@ let pokemonList = [
 })()
 
 let pokemonRepository = pokemonList
-//working through Task Part 2, Number 2
+
 
 
 // for (let i = 0; i < pokemonList.length; i++) {
