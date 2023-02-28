@@ -8,7 +8,7 @@ let pokemonList = [
 
 })()
 
-let pokemonRepository = 
+let pokemonRepository = pokemonList
 //working through Task Part 2, Number 2
 
 
