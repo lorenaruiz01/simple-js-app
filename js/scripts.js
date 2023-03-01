@@ -49,14 +49,20 @@ let pokemonRepository = (function (){
 
 console.log(pokemonRepository.getAll());
 
+
+
 function myLoopFunction(pokemon) {
         console.log(pokemon.name + " is " + pokemon.height + "m tall");
       }
       pokemonList.forEach(myLoopFunction);
+      
+      console.log(pokemonRepository.getAll());
+      //using getAll function from IIFE to retrieve pokemonList array 
 
 
 
 
+      
 
 
 // for (let i = 0; i < pokemonList.length; i++) {
