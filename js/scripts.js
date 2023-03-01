@@ -35,8 +35,10 @@ let pokemonRepository = (function (){
         function getAll(){
                 return pokemonList;
         }
-        function add (pokemon){
-                pokemonList.push(pokemon);
+        function add (item){
+                pokemonRepository.add(item);
+                //pokemonList.push(item)
+                //not sure if this is the code needed instead
         }
 
         return {
