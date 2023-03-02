@@ -36,8 +36,8 @@ let pokemonRepository = (function (){
                 return pokemonList;
         }
         function add (item){
-                pokemonRepository.add(item);
-                //pokemonList.push(item)
+                //pokemonRepository.add(item);
+                pokemonList.push(item)
                 //not sure if this is the code needed instead
         }
 
