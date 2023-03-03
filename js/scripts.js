@@ -55,7 +55,6 @@ function myLoopFunction(pokemon) {
       const pokemonList = pokemonRepository.getAll();
       pokemonList.forEach(myLoopFunction);
       console.log(pokemonRepository.getAll());
-      //using getAll function from IIFE to retrieve pokemonList array 
 
 
 
