@@ -45,9 +45,6 @@ let pokemonRepository = (function (){
         }
 })()
 
-console.log(pokemonRepository.getAll());
-//should this be deleted since I already have it in line 57?
-
 
 function myLoopFunction(pokemon) {    //does `pokemon` need to be named before I can use it here? 
         console.log(pokemon.name + " is " + pokemon.height + "m tall");
