@@ -50,6 +50,8 @@ function myLoopFunction(pokemon) {    //does `pokemon` need to be named before I
         console.log(pokemon.name + " is " + pokemon.height + "m tall");
       }
 const pokemonList = pokemonRepository.getAll();
-pokemonList.forEach(myLoopFunction);
+pokemonList.forEach(myLoopFunction){
+        let listOfPokemon = 
+};
 
 
