@@ -51,7 +51,7 @@ function myLoopFunction(pokemon) {    //does `pokemon` need to be named before I
       }
 const pokemonList = pokemonRepository.getAll();
 pokemonList.forEach(myLoopFunction){
-        let listOfPokemon = 
+        let listOfPokemon = document.querySelector('.pokemon-list')
 };
 
 
