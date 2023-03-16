@@ -46,7 +46,7 @@ let pokemonRepository = (function (){
 })()
 
 
-function myLoopFunction(pokemon) {    //does `pokemon` need to be named before I can use it here? 
+function myLoopFunction(pokemon) {   
         console.log(pokemon.name + " is " + pokemon.height + "m tall");
       }
 const pokemonList = pokemonRepository.getAll();
