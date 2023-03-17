@@ -46,6 +46,6 @@ pokemonList.forEach(function(pokemon){
         let button = document.createElement("button");
         button.innerText = pokemon.name;
         listItem.appendChild(button);
-};
-
+        pokemonListItem.appendChild(listItem);
+});
 
