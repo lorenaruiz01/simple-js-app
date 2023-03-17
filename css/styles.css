@@ -1,6 +1,7 @@
 .button-class {
     background-color: lavender;
     border: 2px solid purple;
+    border-radius: 5px;
     color: black;
     font-size: 16px;
     padding: 20px;
