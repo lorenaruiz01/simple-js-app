@@ -26,14 +26,14 @@ let pokemonRepository = (function (){
                 return pokemonList;
         }
         function add (item){
-                pokemonList.push(item)
+                pokemonList.push(item);
         }
 
         return {
                 getAll: getAll,
                 add:add
-        }
-})()
+        };
+})();
 
 
 function myLoopFunction(pokemon) {   
