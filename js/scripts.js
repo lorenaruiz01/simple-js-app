@@ -28,10 +28,14 @@ let pokemonRepository = (function (){
         function add (item){
                 pokemonList.push(item);
         }
+        function addListItem (){
+
+        }
 
         return {
                 getAll: getAll,
-                add:add
+                add:add,
+                addListItem: addListItem,
         };
 })();
 
