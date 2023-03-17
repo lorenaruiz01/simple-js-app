@@ -37,7 +37,9 @@ let pokemonRepository = (function (){
                 listItem.appendChild(button);
                 pokemonListItem.appendChild(listItem);
         }
-
+        function showDetails(pokemon){
+                
+        }
         return {
                 getAll: getAll,
                 add:add,
