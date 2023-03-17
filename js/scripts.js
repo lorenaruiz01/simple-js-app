@@ -49,7 +49,7 @@ let pokemonRepository = (function (){
 function myLoopFunction(pokemon) {   
         console.log(pokemon.name + " is " + pokemon.height + "m tall");
 }
-pokemonRepository.forEach(function(pokemon){
+pokemonRepository.getAll().forEach(function(pokemon){
         pokemonRepository.addListItem(pokemon);
 });
 
