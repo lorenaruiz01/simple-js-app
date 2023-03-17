@@ -40,7 +40,7 @@ function myLoopFunction(pokemon) {
         console.log(pokemon.name + " is " + pokemon.height + "m tall");
 }
 const pokemonList = pokemonRepository.getAll();
-pokemonList.forEach(myLoopFunction){
+pokemonList.forEach(function(pokemon){
         let pokemonList = document.querySelector(".pokemon-list");
         let listItem = document.createElement('li');
         let button = document.createElement('button');
