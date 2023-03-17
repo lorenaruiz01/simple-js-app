@@ -28,7 +28,7 @@ let pokemonRepository = (function (){
         function add (item){
                 pokemonList.push(item);
         }
-        function addListItem (){
+        function addListItem(pokemon){
                 let pokemonListItem = document.querySelector(".pokemon-list");
                 let listItem = document.createElement("li");
                 let button = document.createElement("button");
@@ -50,6 +50,6 @@ function myLoopFunction(pokemon) {
         console.log(pokemon.name + " is " + pokemon.height + "m tall");
 }
 pokemonList.forEach(function(pokemon){
-        
+        pokemonList.addListItem(pokemon);
 });
 
