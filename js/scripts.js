@@ -1,4 +1,4 @@
-let pokemonRepository = (function (){
+let repository = (function (){
         let pokemonList = [
                 {
                         name: 'Bulbasaur',
@@ -55,7 +55,7 @@ let pokemonRepository = (function (){
 function myLoopFunction(pokemon) {   
         console.log(pokemon.name + " is " + pokemon.height + "m tall");
 }
-pokemonRepository.getAll().forEach(function(pokemon){
-        pokemonRepository.addListItem(pokemon);
+repository.getAll().forEach(function(pokemon){
+        repository.addListItem(pokemon);
 });
 
