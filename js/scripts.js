@@ -80,3 +80,10 @@ let pokemonRepository = (function () {
       console.error(e);
     })
   }
+
+  return {
+    add: add,
+    getAll: getAll,
+    loadList: loadList
+  };
+})();
