@@ -1,5 +1,6 @@
-let repository = (function (){
-        let pokemonList = []
+let pokemonRepository = (function () {
+        let pokemonList = [];
+        let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
         function getAll(){
                 return pokemonList;
@@ -38,9 +39,14 @@ repository.getAll().forEach(function(pokemon){
         repository.addListItem(pokemon);
 });
 
-let pokemonRepository = (function () {
-  let pokemonList = [];
-  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+
+
+
+
+
+
+
+
 
   // Other functions remain here
 
