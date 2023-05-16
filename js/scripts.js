@@ -89,6 +89,10 @@ let pokemonRepository = (function () {
                 modalContainer.classList.add('is-visible');
               }
 
+              function hideModal() {
+                
+              }
+
 
 
               return {
