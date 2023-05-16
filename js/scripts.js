@@ -92,7 +92,9 @@ let pokemonRepository = (function () {
               function hideModal() {
                 modalContainer.classList.remove('is-visible');
             
-                
+                if (dialogPromiseReject) {
+                  
+                }
               }
 
 
