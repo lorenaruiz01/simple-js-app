@@ -67,6 +67,7 @@ let pokemonRepository = (function () {
                 // Clear all existing modal content
                 modalContainer.innerHTML = '';
 
+                modal.classList.add('modal');
                 
               }
 
