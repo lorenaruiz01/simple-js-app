@@ -68,6 +68,10 @@ let pokemonRepository = (function () {
                 modalContainer.innerHTML = '';
 
                 modal.classList.add('modal');
+
+                // Add the new modal content
+                let closeButtonElement = document.createElement('button');
+                
                 
               }
 
