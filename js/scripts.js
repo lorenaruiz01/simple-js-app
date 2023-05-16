@@ -59,7 +59,9 @@ let pokemonRepository = (function () {
 
               }
 
-              
+              function showModal (item){
+                
+              }
 
 
 
