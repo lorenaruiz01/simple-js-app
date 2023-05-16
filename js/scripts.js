@@ -60,8 +60,9 @@ let pokemonRepository = (function () {
               }
               
               let modalContainer = document.querySelector('#modal-container');
-              
+              let dialogPromiseReject;
               let modal = document.createElement('div');
+
 
               function showModal (item){
                 // Clear all existing modal content
@@ -93,7 +94,7 @@ let pokemonRepository = (function () {
                 modalContainer.classList.remove('is-visible');
             
                 if (dialogPromiseReject) {
-                  
+                 
                 }
               }
 
