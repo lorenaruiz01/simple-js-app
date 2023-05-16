@@ -81,6 +81,7 @@ let pokemonRepository = (function () {
                 let contentElement = document.createElement('p');
                 contentElement.innerText = text;
                 
+                modal.appendChild(closeButtonElement);
                 
               }
 
