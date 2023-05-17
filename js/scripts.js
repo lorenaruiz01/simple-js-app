@@ -62,7 +62,7 @@ let pokemonRepository = (function () {
               
 
 
-              function showModal (item){
+              function showModal (title, text){
                 let modalContainer = document.querySelector('#modal-container');
                 let dialogPromiseReject;
                 let modal = document.createElement('div');
