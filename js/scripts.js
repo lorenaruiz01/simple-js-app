@@ -66,6 +66,7 @@ let pokemonRepository = (function () {
                 console.log("item", item);
 
                 // let dialogPromiseReject;
+                
                 let modal = document.createElement('div');
 
                 // Clear all existing modal content
