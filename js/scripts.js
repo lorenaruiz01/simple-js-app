@@ -37,7 +37,7 @@ let pokemonRepository = (function () {
                 })
               }
 
-              function loadDetails(item) {
+        function loadDetails(item) {
                 let url = item.detailsUrl;
                 return fetch(url).then(function (response) {
                   return response.json();
@@ -51,7 +51,7 @@ let pokemonRepository = (function () {
                 });
               }
 
-              function showDetails(item){
+        function showDetails(item){
                 pokemonRepository.loadDetails(item).then(function() {
                   showModal(item);
                   console.log(item);
@@ -62,7 +62,7 @@ let pokemonRepository = (function () {
               
 
 
-              function showModal (title, text){
+        function showModal (title, text){
                 let modalContainer = document.querySelector('#modal-container');
                 let dialogPromiseReject;
                 let modal = document.createElement('div');
@@ -92,7 +92,7 @@ let pokemonRepository = (function () {
                 modalContainer.classList.add('is-visible');
               }
 
-              function hideModal() {
+        function hideModal() {
                 modalContainer.classList.remove('is-visible');
             
                 if (dialogPromiseReject) {
