@@ -66,7 +66,7 @@ let pokemonRepository = (function () {
                 console.log("item", item);
 
                 // let dialogPromiseReject;
-                
+
                 let modal = document.createElement('div');
 
                 // Clear all existing modal content
@@ -81,7 +81,7 @@ let pokemonRepository = (function () {
                 closeButtonElement.addEventListener('click', hideModal);
                 
                 let titleElement = document.createElement('h1');
-                titleElement.innerText = title;
+                titleElement.innerText = item.name;
                 
                 let contentElement = document.createElement('p');
                 contentElement.innerText = text;
