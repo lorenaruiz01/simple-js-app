@@ -84,7 +84,7 @@ let pokemonRepository = (function () {
                 titleElement.innerText = item.name;
                 
                 let contentElement = document.createElement('p');
-                contentElement.innerText = text;
+                contentElement.innerText = item.detailsUrl;
                 
                 modal.appendChild(closeButtonElement);
                 modal.appendChild(titleElement);
