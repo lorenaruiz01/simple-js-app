@@ -65,7 +65,7 @@ let pokemonRepository = (function () {
         function showModal (item){
                 console.log("item", item);
 
-                // let dialogPromiseReject;
+                
 
                 let modal = document.createElement('div');
 
@@ -96,7 +96,7 @@ let pokemonRepository = (function () {
 
         function hideModal() {
                 modalContainer.classList.remove('is-visible');
-            
+                let dialogPromiseReject;
                 if (dialogPromiseReject) {
                   dialogPromiseReject();
                   dialogPromiseReject = null;
