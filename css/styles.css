@@ -19,5 +19,7 @@
   }
 
   #modal-container.is-visible {
+    position: fixed;
+
+  }  
    
-  }
