@@ -13,3 +13,9 @@
     transition-duration: .5s;
     
 }
+
+#modal-container {
+    display: none;
+  }
+
+  
