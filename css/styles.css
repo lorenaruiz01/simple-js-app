@@ -15,7 +15,7 @@
 }
 
 .pokemon-list {
-    
+    list-style-type: none
 }
 
 #modal-container {
