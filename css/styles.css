@@ -56,15 +56,16 @@
     -webkit-appearance: none;
     border: 0;
     background: none;
-    color: #777;
+    color: white;
     text-decoration: underline;
 }
 
   .modal h1 {
     margin-top: 0;
+    color: white
 }
 
 .modal p {
     margin-bottom: 0;
-    color: green;
+    color: white;
   }
