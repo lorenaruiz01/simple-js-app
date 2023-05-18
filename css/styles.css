@@ -51,5 +51,6 @@
 
  .modal-close {
     float: right;
-    
+    -webkit-appearance: none;
+   
   }
