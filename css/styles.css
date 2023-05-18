@@ -18,4 +18,6 @@
     display: none;
   }
 
-  
+  #modal-container.is-visible {
+   
+  }
