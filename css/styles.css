@@ -1,6 +1,6 @@
 h1 {
     text-align: center;
-    
+
 }
 .button-class {
     background-color: lavender;
@@ -52,6 +52,9 @@ h1 {
 }
 
 .modal {
+    position: fixed;
+  
+    
     display: inline-block;
     box-sizing: border-box;
     background: rgb(189, 71, 228);
