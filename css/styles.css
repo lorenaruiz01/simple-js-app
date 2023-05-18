@@ -29,5 +29,6 @@
     background: rgba(0, 0, 0, 0.5);
 }  
 
+/* to show modal above other content */
+z-index: 999; 
 
-  
