@@ -35,4 +35,8 @@ z-index: 999;
 /* to allow scrolling if the screen is not high enough*/
 overflow: auto; 
 
-  }
+/* this is used to center the modal */
+display: grid;
+text-align: center;
+}
+
