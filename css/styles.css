@@ -53,5 +53,6 @@
     float: right;
     -webkit-appearance: none;
     border: 0;
-   
+    background: none;
+    
   }
