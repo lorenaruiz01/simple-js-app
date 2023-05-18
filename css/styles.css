@@ -27,8 +27,12 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-}  
+
 
 /* to show modal above other content */
 z-index: 999; 
 
+/* to allow scrolling if the screen is not high enough*/
+overflow: auto; 
+
+  }
