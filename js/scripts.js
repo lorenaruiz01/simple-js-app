@@ -68,7 +68,7 @@ let pokemonRepository = (function () {
                 
 
                 let modal = document.createElement('div');
-
+                let details = item.height;
 
                 // Clear all existing modal content
                 modalContainer.innerHTML = '';
@@ -91,13 +91,12 @@ let pokemonRepository = (function () {
                 
                 // Add content to modal
                 let contentElement = document.createElement('div');
-             
-                contentElement.innerText = item.types;
+                contentElement.innerText = details;
               
 
 
-                let detailsElement = document.createElement('div');
-                detailsElement.textContent = item.url;
+                // let detailsElement = document.createElement('div');
+                // detailsElement.textContent = item.url;
                 
   
                 modal.appendChild(closeButtonElement);
