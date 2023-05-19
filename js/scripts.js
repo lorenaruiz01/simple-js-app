@@ -69,6 +69,7 @@ let pokemonRepository = (function () {
 
                 let modal = document.createElement('div');
 
+
                 // Clear all existing modal content
                 modalContainer.innerHTML = '';
 
@@ -84,19 +85,26 @@ let pokemonRepository = (function () {
                 let titleElement = document.createElement('h1');
                 titleElement.innerText = item.name;
                 
+                // Add image to modal
+                let imageElement = document.createElement('img');
+                imageElement.src = item.imageUrl;
+                
                 // Add content to modal
                 let contentElement = document.createElement('div');
-                let imageElement = document.createElement('img');
-                imageElement.src = imageUrl;
+             
                 contentElement.appendChild(imageElement);
-                contentElement.innerText = detailsUrl;
+                contentElement.innerText = item.height;
+                contentElement.innerText = item.types;
+
 
                 let detailsElement = document.createElement('div');
                 detailsElement.textContent = item.url;
                 
+  
                 modal.appendChild(closeButtonElement);
                 modal.appendChild(titleElement);
                 modal.appendChild(contentElement);
+                modal.appendChild(imageElement);
                 modalContainer.appendChild(modal);
                 
                 modalContainer.classList.add('is-visible');
