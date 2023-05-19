@@ -68,7 +68,7 @@ let pokemonRepository = (function () {
                 
 
                 let modal = document.createElement('div');
-                let details = item.height;
+                let details = 'Height: '+ item.height;
 
                 // Clear all existing modal content
                 modalContainer.innerHTML = '';
