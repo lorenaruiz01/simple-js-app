@@ -89,7 +89,7 @@ let pokemonRepository = (function () {
                 contentElement.appendChild(imageElement);
                 contentElement.innerText = item.detailsUrl;
 
-                let detailsElement 
+                let detailsElement = document.createElement('div');
                 
                 modal.appendChild(closeButtonElement);
                 modal.appendChild(titleElement);
