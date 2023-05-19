@@ -74,15 +74,17 @@ let pokemonRepository = (function () {
 
                 modal.classList.add('modal');
 
-                // Add the new modal content
+                // Add a close button to the modal
                 let closeButtonElement = document.createElement('button');
                 closeButtonElement.classList.add('modal-close');
                 closeButtonElement.innerText = 'Close';
                 closeButtonElement.addEventListener('click', hideModal);
                 
+                // Add title to modal
                 let titleElement = document.createElement('h1');
                 titleElement.innerText = item.name;
                 
+                // Add content to modal
                 let contentElement = document.createElement('div');
                 let imageElement = document.createElement('img');
                 imageElement.src = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
