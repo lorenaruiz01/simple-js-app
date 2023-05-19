@@ -89,7 +89,7 @@ let pokemonRepository = (function () {
                 let imageElement = document.createElement('img');
                 imageElement.src = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
                 contentElement.appendChild(imageElement);
-                contentElement.innerText = item.detailsUrl;
+                contentElement.innerText = detailsUrl;
 
                 let detailsElement = document.createElement('div');
                 detailsElement.textContent = item.url;
