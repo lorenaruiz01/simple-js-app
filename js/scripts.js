@@ -85,12 +85,12 @@ let pokemonRepository = (function () {
                 
                 let contentElement = document.createElement('div');
                 let imageElement = document.createElement('img');
-                imageElement.src = imageUrl;
+                imageElement.src = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
                 contentElement.appendChild(imageElement);
                 contentElement.innerText = item.detailsUrl;
 
                 let detailsElement = document.createElement('div');
-                detailsElement.textContent = detailsUrl;
+                detailsElement.textContent = item.url;
                 
                 modal.appendChild(closeButtonElement);
                 modal.appendChild(titleElement);
