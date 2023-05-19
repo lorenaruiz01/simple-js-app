@@ -88,6 +88,8 @@ let pokemonRepository = (function () {
                 imageElement.src = imageURL;
                 contentElement.appendChild(imageElement);
                 contentElement.innerText = item.detailsUrl;
+
+                let detailsElement 
                 
                 modal.appendChild(closeButtonElement);
                 modal.appendChild(titleElement);
