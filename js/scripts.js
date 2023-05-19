@@ -92,9 +92,8 @@ let pokemonRepository = (function () {
                 // Add content to modal
                 let contentElement = document.createElement('div');
              
-                contentElement.appendChild(imageElement);
-                contentElement.innerText = item.height;
                 contentElement.innerText = item.types;
+              
 
 
                 let detailsElement = document.createElement('div');
