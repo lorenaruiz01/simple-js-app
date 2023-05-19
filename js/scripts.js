@@ -87,7 +87,7 @@ let pokemonRepository = (function () {
                 // Add content to modal
                 let contentElement = document.createElement('div');
                 let imageElement = document.createElement('img');
-                imageElement.src = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+                imageElement.src = imageUrl;
                 contentElement.appendChild(imageElement);
                 contentElement.innerText = detailsUrl;
 
