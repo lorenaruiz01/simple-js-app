@@ -63,49 +63,54 @@ let pokemonRepository = (function () {
         let modalContainer = document.querySelector('#modal-container');
 
         function showModal (item){
-                console.log("item", item);
+          let modalBody = $(".modal-body");
+          
+
+
+
+                // console.log("item", item);
 
                 
 
-                let modal = document.createElement('div');
-                let details = 'Height: '+ item.height;
+                // let modal = document.createElement('div');
+                // let details = 'Height: '+ item.height;
 
-                // Clear all existing modal content
-                modalContainer.innerHTML = '';
+                // // Clear all existing modal content
+                // modalContainer.innerHTML = '';
 
-                modal.classList.add('modal');
+                // modal.classList.add('modal');
 
-                // Add a close button to the modal
-                let closeButtonElement = document.createElement('button');
-                closeButtonElement.classList.add('modal-close');
-                closeButtonElement.innerText = 'Close';
-                closeButtonElement.addEventListener('click', hideModal);
+                // // Add a close button to the modal
+                // let closeButtonElement = document.createElement('button');
+                // closeButtonElement.classList.add('modal-close');
+                // closeButtonElement.innerText = 'Close';
+                // closeButtonElement.addEventListener('click', hideModal);
                 
-                // Add title to modal
-                let titleElement = document.createElement('h1');
-                titleElement.innerText = item.name;
+                // // Add title to modal
+                // let titleElement = document.createElement('h1');
+                // titleElement.innerText = item.name;
                 
-                // Add image to modal
-                let imageElement = document.createElement('img');
-                imageElement.src = item.imageUrl;
+                // // Add image to modal
+                // let imageElement = document.createElement('img');
+                // imageElement.src = item.imageUrl;
                 
-                // Add content to modal
-                let contentElement = document.createElement('div');
-                contentElement.innerText = details;
+                // // Add content to modal
+                // let contentElement = document.createElement('div');
+                // contentElement.innerText = details;
               
 
 
-                // let detailsElement = document.createElement('div');
-                // detailsElement.textContent = item.url;
+                // // let detailsElement = document.createElement('div');
+                // // detailsElement.textContent = item.url;
                 
   
-                modal.appendChild(closeButtonElement);
-                modal.appendChild(titleElement);
-                modal.appendChild(imageElement);
-                modal.appendChild(contentElement);
-                modalContainer.appendChild(modal);
+                // modal.appendChild(closeButtonElement);
+                // modal.appendChild(titleElement);
+                // modal.appendChild(imageElement);
+                // modal.appendChild(contentElement);
+                // modalContainer.appendChild(modal);
                 
-                modalContainer.classList.add('is-visible');
+                // modalContainer.classList.add('is-visible');
               }
 
         function hideModal() {
