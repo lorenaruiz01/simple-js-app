@@ -72,8 +72,7 @@ let pokemonRepository = (function () {
 
 
           // Add title to modal
-          let titleElement = document.createElement('h1');
-          titleElement.innerText = item.name;
+          let titleElement = $("<h1>" + item.name + "</h1>" )
 
                 
 
