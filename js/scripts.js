@@ -84,8 +84,9 @@ let pokemonRepository = (function () {
           // Add types to modal
           let typesElement = $("<p>" + item.types + "</p>");
 
-                
-                
+          
+          modalTitle.append(titleElement);
+    
   
                 // modal.appendChild(closeButtonElement);
                 // modal.appendChild(titleElement);
