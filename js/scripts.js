@@ -75,7 +75,7 @@ let pokemonRepository = (function () {
           let titleElement = $("<h1>" + item.name + "</h1>" )
           // Add image to modal
           let imageElement = $('<img class="modal-img" style="width:50%">');
-          
+          imageElement.attr("src", item.imageUrl);
           
 
                 // let modal = document.createElement('div');
