@@ -69,7 +69,11 @@ let pokemonRepository = (function () {
 
           modalTitle.empty();
           modalBody.empty();
-                // console.log("item", item);
+
+
+          // Add title to modal
+          let titleElement = document.createElement('h1');
+          titleElement.innerText = item.name;
 
                 
 
