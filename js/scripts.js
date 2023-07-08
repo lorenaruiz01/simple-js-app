@@ -80,7 +80,10 @@ let pokemonRepository = (function () {
           
           // Add height to modal
           let heightElement = $("<p>" + item.height + "</p>");
-          
+
+          // Add types to modal
+          let typesElement = $("<p>" + item.types + "</p>");
+
                 // let modal = document.createElement('div');
                 // let details = 'Height: '+ item.height;
 
