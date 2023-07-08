@@ -84,36 +84,7 @@ let pokemonRepository = (function () {
           // Add types to modal
           let typesElement = $("<p>" + item.types + "</p>");
 
-                // let modal = document.createElement('div');
-                // let details = 'Height: '+ item.height;
-
-                // // Clear all existing modal content
-                // modalContainer.innerHTML = '';
-
-                // modal.classList.add('modal');
-
-                // // Add a close button to the modal
-                // let closeButtonElement = document.createElement('button');
-                // closeButtonElement.classList.add('modal-close');
-                // closeButtonElement.innerText = 'Close';
-                // closeButtonElement.addEventListener('click', hideModal);
                 
-                // // Add title to modal
-                // let titleElement = document.createElement('h1');
-                // titleElement.innerText = item.name;
-                
-                // // Add image to modal
-                // let imageElement = document.createElement('img');
-                // imageElement.src = item.imageUrl;
-                
-                // // Add content to modal
-                // let contentElement = document.createElement('div');
-                // contentElement.innerText = details;
-              
-
-
-                // // let detailsElement = document.createElement('div');
-                // // detailsElement.textContent = item.url;
                 
   
                 // modal.appendChild(closeButtonElement);
