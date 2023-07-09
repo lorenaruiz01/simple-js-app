@@ -61,12 +61,12 @@ let pokemonRepository = (function () {
               }
               
               
-        let modalContainer = document.querySelector('#modal-container');
 
         function showModal (item){
+          let modalContainer = document.querySelector('#modal-container');
+          $(modalContainer).addClass("modal fade show").attr("aria-labelledby", "Pokemon details").attr("aria-hidden", "true")
           let modalBody = $(".modal-body");
           let modalTitle = $(".modal-title");
-          // let modalHeader = $(".modal-header");
 
           modalTitle.empty();
           modalBody.empty();
