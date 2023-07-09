@@ -12,7 +12,6 @@ let pokemonRepository = (function () {
         function addListItem(pokemon){
                 let pokemonListItem = document.querySelector(".pokemon-list");
                 let listItem = document.createElement("li");
-                listItem.classList.add("list-group-item");
                 let button = document.createElement("button");
                 button.innerText = pokemon.name;
                 listItem.appendChild(button);
@@ -21,6 +20,9 @@ let pokemonRepository = (function () {
                         showDetails(pokemon);
                       });
         }
+        listItem.classList.add("list-group-item");
+
+        
         function loadList() {
                 return fetch(apiUrl).then(function (response) {
                   return response.json();
