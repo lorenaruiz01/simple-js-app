@@ -67,42 +67,30 @@ let pokemonRepository = (function () {
               
               
 
-        function showModal (item){
-          let modalContainer = document.querySelector('#modal-container');
-          $(modalContainer).addClass("modal fade show").attr("aria-labelledby", "Pokemon details").attr("aria-hidden", "true")
-          let modalBody = $(".modal-body");
-          let modalTitle = $(".modal-title");
-
-          modalTitle.empty();
-          modalBody.empty();
-
-
-          // Add title to modal
-          let titleElement = $("<h1>" + item.name + "</h1>" )
-          
-          // Add image to modal
-          let imageElement = $('<img class="modal-img" style="width:50%">');
-          imageElement.attr("src", item.imageUrl);
-          
-          // Add height to modal
-          let heightElement = $("<p>" + item.height + "</p>");
-
-          // Add types to modal
-          let typesElement = $("<p>" + item.types + "</p>");
-
-          
-          modalTitle.append(titleElement);
-          modalBody.append(imageElement);
-          modalBody.append(heightElement);
-          modalBody.append(typesElement);  
-  
-                // modal.appendChild(closeButtonElement);
-                // modal.appendChild(titleElement);
-                // modal.appendChild(imageElement);
-                // modal.appendChild(contentElement);
-                // modalContainer.appendChild(modal);
-                
-                // modalContainer.classList.add('is-visible');
+        function showModal(item) {
+                let modalContainer = document.querySelector('#modal-container');
+                console.log(modalContainer);
+                modalContainer.classList.add('is-visible');
+                modalContainer.classList.add("modal");
+            
+                let closeButtonElement = document.createElement('button');
+                closeButtonElement.addEventListener('click', hideModal);
+            
+                let nameElement = document.createElement('h1');
+                nameElement.innerText = item.name;
+            
+                let imageElement = document.createElement('img');
+                imageElement.classList.add('modal-img');
+                imageElement.setAttribute('src', item.imageUrl);
+            
+                let heightElement = document.createElement('p');
+                heightElement.innerText = 'height : ' + item.height;
+            
+                modalContainer.appendChild(closeButtonElement);
+                modalContainer.appendChild(nameElement);
+                modalContainer.appendChild(imageElement);
+                modalContainer.appendChild(heightElement);
+            
               }
 
         function hideModal() {
