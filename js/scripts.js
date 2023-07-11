@@ -71,7 +71,9 @@ let pokemonRepository = (function () {
                 let modalContainer = document.querySelector('#modal-container');
                 console.log(modalContainer);
                 modalContainer.classList.add('is-visible');
-                modalContainer.classList.add("modal");
+                modalContainer.classList.add('modal');
+                modalContainer.classList.add('modal-dialog');
+                modalContainer.classList.add('modal-dialog-centered');
             
                 let closeButtonElement = document.createElement('button');
                 closeButtonElement.addEventListener('click', hideModal);
