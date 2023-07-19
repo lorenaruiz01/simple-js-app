@@ -5,9 +5,12 @@ let pokemonRepository = (function () {
 
         function getAll(){
                 return pokemonList;
+                // does this return an empty array? should apiUrl be assigned to pokemonList?:
+                // pokemonList = apiUrl
         }
-        function add (item){
+        function add (item){  
                 pokemonList.push(item);
+                // item is a parameter, correct? does item need to be defined prior to line 9?
         }
         function addListItem(pokemon){
                 let pokemonListItem = document.querySelector(".pokemon-list");
