@@ -3,7 +3,7 @@ let pokemonRepository = (function () {
         let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
 
-        function getAll(){
+        function getAll(){  //used to return items in pokemonList
                 return pokemonList;
                 // does this return an empty array? should apiUrl be assigned to pokemonList?:
                 // pokemonList = apiUrl
