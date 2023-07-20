@@ -1,16 +1,22 @@
-let pokemonRepository = (function () {
-        let pokemonList = [];
+let pokemonRepository = (function () {  //note for later: name function
+        let pokemonList = []; //array
         let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
 
-        function getAll(){  //used to return items in pokemonList
+        function getAll(){  //used to return items in pokemonList at the time it is called
+          //note: rename getAll to more descriptive
                 return pokemonList;
                 // does this return an empty array? should apiUrl be assigned to pokemonList?:
                 // pokemonList = apiUrl
         }
-        function add (item){  
+
+        /**
+         * adds a pokemon to the pokemon list
+         * @param {*} item - a pokemon
+         */
+        function add (item){  //note: rename add to something more descriptive
                 pokemonList.push(item);
-                // item is a parameter, correct? does item need to be defined prior to line 9?
+                // item is a parameter. does item need to be defined prior to line 9?
         }
         function addListItem(pokemon){
                 let pokemonListItem = document.querySelector(".pokemon-list");
@@ -39,14 +45,15 @@ let pokemonRepository = (function () {
                       name: item.name,
                       detailsUrl: item.url
                     };
-                    add(pokemon);
+                    add(pokemon); // calling add function and passing pokemon as parameter
                   });
                 }).catch(function (e) {
                   console.error(e);
                 })
               }
 
-        function loadDetails(item) {
+        function loadDetails(item) { //note: rename item to something specific within this function
+          // note: rename this item to something specific to this scope
                 let url = item.detailsUrl;
                 return fetch(url).then(function (response) {
                   return response.json();
@@ -60,7 +67,7 @@ let pokemonRepository = (function () {
                 });
               }
 
-        function showDetails(item){
+        function showDetails(item){ 
                 pokemonRepository.loadDetails(item).then(function() {
                   showModal(item);
                   console.log(item);
@@ -78,6 +85,9 @@ let pokemonRepository = (function () {
                 modalContainer.classList.add('modal-dialog');
                 modalContainer.classList.add('modal-dialog-centered');
             
+                // work through: create a div element for modal dialog
+                let modalDialogElement = document.createElement('div')
+
                 let closeButtonElement = document.createElement('button');
                 closeButtonElement.addEventListener('click', hideModal);
             
