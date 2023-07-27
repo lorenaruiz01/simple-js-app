@@ -1,5 +1,5 @@
 let pokemonRepository = (function () {  //wraps the pokemonList inside of an IIFE (Immediately Invoked Function Expression)
-        let pokemonList = []; //array
+        let pokemonList = []; // this is an array of pokemon
         let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
 
