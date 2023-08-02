@@ -52,9 +52,9 @@ h1 {
 }
 
 .modal {
-    /* position: fixed; */
-    top: 50%;
-    left: 50%;
+    position: fixed;
+    /* top: 50%;
+    left: 50%; */
     /* transform: none */
     
     display: inline-block;
