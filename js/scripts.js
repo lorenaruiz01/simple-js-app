@@ -1,14 +1,11 @@
-let pokemonRepository = (function () {  //wraps the pokemonList inside of an IIFE (Immediately Invoked Function Expression)
+let pokemonRepository = (function () {  // wraps the pokemonList inside of an IIFE (Immediately Invoked Function Expression)
         let pokemonList = []; // this is an array of pokemon
         let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
 
-        function getAll(){  //used to return items in pokemonList at the time it is called
-          //note: rename getAll to more descriptive
-                return pokemonList;
-                // does this return an empty array? should apiUrl be assigned to pokemonList?:
-                // pokemonList = apiUrl
-        }
+  function getAll () {    // the getAll function returns all items in the pokemonList array
+    return pokemonList;
+  }
 
         /**
          * adds a pokemon to the pokemon list
