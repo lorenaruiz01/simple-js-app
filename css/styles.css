@@ -65,7 +65,7 @@ h1 {
     /* padding: 15px; */
     width: 100%;
     max-width: -webkit-fill-available;
-    text-align: left;
+    text-align: center;
  }
 
  .modal-close {
