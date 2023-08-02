@@ -57,7 +57,7 @@ h1 {
     left: 50%; */
     /* transform: none */
     
-    display: inline-block;
+    /* display: inline-block; */
     box-sizing: border-box;
     background: rgb(255, 255, 255);
     border: 5px solid rgb(255, 255, 255);
