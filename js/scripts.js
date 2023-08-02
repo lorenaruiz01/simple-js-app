@@ -3,9 +3,9 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
         let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
 
-  function getAll () {    // the getAll function returns all items in the pokemonList array
-    return pokemonList;
-  }
+        function getAll () {    // the getAll function returns all items in the pokemonList array
+          return pokemonList;
+        }
 
         /**
          * adds a pokemon to the pokemon list
