@@ -11,10 +11,11 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
          * adds a pokemon to the pokemon list
          * @param {*} item - a pokemon
          */
-        function add (item){  //note: rename add to something more descriptive
+        function add (item) {  // the add function adds the selected pokemon to the array
                 pokemonList.push(item);
-                // item is a parameter. does item need to be defined prior to line 9?
+                // item is a parameter. think of item as a placeholder for the argument that is passed into the parameter.  
         }
+        
         function addListItem(pokemon){
                 let pokemonListItem = document.querySelector(".pokemon-list");
                 let listItem = document.createElement("li");
