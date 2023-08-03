@@ -12,10 +12,9 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
          * @param {*} item - a pokemon
          */
         function add (item) {  // the add function adds the selected pokemon to the array
-                pokemonList.push(item);
-                // item is a parameter. think of item as a placeholder for the argument that is passed into the parameter.  
+                pokemonList.push(item); // item is a parameter. think of item as a placeholder for the argument that is passed into the parameter.  
         }
-        
+
         function addListItem(pokemon){
                 let pokemonListItem = document.querySelector(".pokemon-list");
                 let listItem = document.createElement("li");
@@ -118,8 +117,8 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
 
 
         return {
-                add: add,
                 getAll: getAll,
+                add: add,
                 addListItem: addListItem,
                 loadList: loadList,
                 loadDetails:loadDetails,
