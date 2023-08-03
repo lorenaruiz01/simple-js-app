@@ -4,21 +4,21 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
 
 
         function getAll () {    // the getAll function returns all items in the pokemonList array
-          return pokemonList;
+            return pokemonList;
         }
 
-              /** @param {*} pokemon - placeholder */
+                /** @param {*} pokemon - placeholder */
         function add (pokemon) {  // the add function adds the selected pokemon to the pokemonList array
-          if (
-            typeof pokemon === 'object' && //pokemon must be an object with a name, height, and types
-            'name' in pokemon &&
-            'height' in pokemon &&
-            'types' in pokemon
-          ) {
-            pokemonList.push(pokemon);    // pokemon is a parameter. think of pokemon as a placeholder for the actual pokemon name that is passed into the parameter when the add() function runs.  
-          } else {
-            console.log('pokemon cannot be pushed to pokemonList')
-          }      
+              if (
+                typeof pokemon === 'object' && //pokemon must be an object with a name, height, and types
+                'name' in pokemon &&
+                'height' in pokemon &&
+                'types' in pokemon
+              ) {
+                pokemonList.push(pokemon);    // pokemon is a parameter. think of pokemon as a placeholder for the actual pokemon name that is passed into the parameter when the add() function runs.  
+              } else {
+                console.log('pokemon cannot be pushed to pokemonList')
+              }      
        }
 
         function addListItem(pokemon) {      // the addListItem function adds a pokemon as a list item and button
