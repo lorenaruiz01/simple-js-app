@@ -7,13 +7,26 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
           return pokemonList;
         }
 
-        /**
-         * adds a pokemon to the pokemon list
-         * @param {*} item - a pokemon
-         */
-        function add (item) {  // the add function adds the selected pokemon to the array
-                pokemonList.push(item); // item is a parameter. think of item as a placeholder for the argument that is passed into the parameter.  
-        }
+        
+
+        /** @param {*} pokemon - placeholder */
+
+        function add (pokemon) {  // the add function adds the selected pokemon to the pokemonList array
+          if (
+            typeof pokemon === 'object' && //pokemon must be an object with a name, detailsUrl, and id
+            'name' in pokemon &&
+            'detailsUrl' in pokemon &&
+            'id' in pokemon
+        ) {
+            pokemonList.push(pokemon);
+        } else {
+            console.log('pokemon cannot be pushed to pokemonList')
+        }      
+          
+          pokemonList.push(pokemon); // pokemon is a parameter. think of pokemon as a placeholder for the actual pokemon name that is passed into the parameter when the add() function runs.  
+
+
+              }
 
         function addListItem(pokemon) {      // the addListItem function adds a pokemon as a list item and button
                 
@@ -142,7 +155,7 @@ function myLoopFunction(pokemon) {
 
 pokemonRepository.loadList().then(function() {
         // Now the data is loaded!
-pokemonRepository.getAll().forEach(function(pokemon){
+pokemonRepository.getAll().forEach(function(pokemon){   // this forEach function loops over each pokemon item and runs the addListItem function for each pokemon item
         pokemonRepository.addListItem(pokemon);   // this calls the addListItem function that's inside the pokemonRepository, passing in the pokemon as a parameter
         });
       });
