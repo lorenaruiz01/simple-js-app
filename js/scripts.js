@@ -15,7 +15,9 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
                 pokemonList.push(item); // item is a parameter. think of item as a placeholder for the argument that is passed into the parameter.  
         }
 
-        function addListItem(pokemon){
+        function addListItem(pokemon){      // the addListItem function adds a pokemon as a list item and button
+                
+                // assign ul element to pokemonList variable
                 let pokemonListItem = document.querySelector(".pokemon-list");
                 let listItem = document.createElement("li");
                 let button = document.createElement("button");
