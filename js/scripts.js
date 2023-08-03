@@ -126,16 +126,15 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
 
 
 
-        return {
-                getAll: getAll,
-                add: add,
+              return {    // this returns an object with the value of the getAll and the add function
+                getAll: getAll,   // getAll: is the key that calls the function and returns the value of the same name (key : value)
+                add:add,       // add: is the key that calls the function and returns the value of the same name (key : value)
                 addListItem: addListItem,
                 loadList: loadList,
                 loadDetails:loadDetails,
                 showDetails:showDetails
-              };
-        })(); 
-
+              }
+            }) ();        // the (); makes this a self-executing function
 
 function myLoopFunction(pokemon) {   
         console.log(pokemon.name + " is " + pokemon.height + "m tall");
