@@ -7,13 +7,13 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
           return pokemonList;
         }
 
-                    /** @param {*} pokemon - placeholder */
+              /** @param {*} pokemon - placeholder */
         function add (pokemon) {  // the add function adds the selected pokemon to the pokemonList array
           if (
-            typeof pokemon === 'object' && //pokemon must be an object with a name, detailsUrl, and id
+            typeof pokemon === 'object' && //pokemon must be an object with a name, height, and types
             'name' in pokemon &&
-            'detailsUrl' in pokemon &&
-            'id' in pokemon
+            'height' in pokemon &&
+            'types' in pokemon
         ) {
             pokemonList.push(pokemon);
         } else {
