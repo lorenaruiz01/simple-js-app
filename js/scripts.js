@@ -143,6 +143,6 @@ function myLoopFunction(pokemon) {
 pokemonRepository.loadList().then(function() {
         // Now the data is loaded!
 pokemonRepository.getAll().forEach(function(pokemon){
-        pokemonRepository.addListItem(pokemon);
+        pokemonRepository.addListItem(pokemon);   // this calls the addListItem function that's inside the pokemonRepository, passing in the pokemon as a parameter
         });
       });
