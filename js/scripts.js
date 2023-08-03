@@ -18,9 +18,13 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
         function addListItem(pokemon){      // the addListItem function adds a pokemon as a list item and button
                 
                 // assign ul element to pokemonList variable
-                let pokemonListItem = document.querySelector(".pokemon-list");
-                let listItem = document.createElement("li");
-                let button = document.createElement("button");
+                let pokemonListItem = document.querySelector('ul');
+                
+                // create a list element
+                let listItem = document.createElement('li');
+                
+                // create a button element
+                let button = document.createElement('button');
                 
                 button.innerText = pokemon.name;
                 $(button).addClass("list-button btn btn-primary button-class").attr("type", "button").attr("data-toggle", "modal").attr("data-target", "modal-container");
