@@ -14,16 +14,12 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
             'name' in pokemon &&
             'height' in pokemon &&
             'types' in pokemon
-        ) {
-            pokemonList.push(pokemon);
-        } else {
+          ) {
+            pokemonList.push(pokemon);    // pokemon is a parameter. think of pokemon as a placeholder for the actual pokemon name that is passed into the parameter when the add() function runs.  
+          } else {
             console.log('pokemon cannot be pushed to pokemonList')
-        }      
-          
-          pokemonList.push(pokemon); // pokemon is a parameter. think of pokemon as a placeholder for the actual pokemon name that is passed into the parameter when the add() function runs.  
-
-
-              }
+          }      
+       }
 
         function addListItem(pokemon) {      // the addListItem function adds a pokemon as a list item and button
                 
