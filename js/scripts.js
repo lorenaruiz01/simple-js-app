@@ -143,9 +143,6 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
           }
 }) ();        // the (); makes this a self-executing function
 
-// function myLoopFunction(pokemon) {   
-//         console.log(pokemon.name + " is " + pokemon.height + "m tall");
-// }
 
 pokemonRepository.loadList().then(function() { // loads data
   pokemonRepository.getAll().forEach(function (pokemon) {   // this forEach function loops over each pokemon item and runs the addListItem function for each pokemon item
