@@ -72,16 +72,15 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
                 })
           }
 
-        function loadDetails(item) { //note: rename item to something specific within this function
-          // note: rename this item to something specific to this scope
-                let url = item.detailsUrl;
+        function loadDetails(pokemon) { 
+                let url = pokemon.detailsUrl;
                 return fetch(url).then(function (response) {
                   return response.json();
                 }).then(function (details) {
-                  //add the details to the item
-                  item.imageUrl = details.sprites.front_default;
-                  item.height = details.height;
-                  item.types = details.types;
+                  //add the details to the pokemon item
+                  pokemon.imageUrl = details.sprites.front_default;
+                  pokemon.height = details.height;
+                  pokemon.types = details.types;
                 }).catch(function (e) {
                   console.error(e);
                 });
@@ -97,7 +96,7 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
               
 
         function showModal(item, modalContainer) {
-                let modalContainer = document.querySelector('#modal-container');
+                // let modalContainer = document.querySelector('#modal-container');
                 modalContainer.classList.add('is-visible');
                 modalContainer.classList.add('modal');
                 modalContainer.classList.add('modal-dialog');
