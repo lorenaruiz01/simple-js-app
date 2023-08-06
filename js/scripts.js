@@ -41,10 +41,13 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
                 
                 // add class to listItem element
                 listItem.classList.add("list-group-item");
-                // add button to listItem
+
+                // add button to list element
                 listItem.appendChild(button);
+
                 // add 'li' to 'ul' element
                 pokemonListItem.appendChild(listItem);
+
                 // run showDetails function when user clicks button
                 button.addEventListener('click', function(pokemon) {
                       showDetails(pokemon);
