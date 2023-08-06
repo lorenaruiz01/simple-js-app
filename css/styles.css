@@ -26,9 +26,9 @@ h1 {
     align-items: center;
 }
 
-/* #modal-container {
+#modal-container {
     display: none;
-} */
+} 
 
   #modal-container.is-visible {
     position: absolute;
