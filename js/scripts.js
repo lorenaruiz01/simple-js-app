@@ -5,7 +5,7 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
 
         function getAll () {    // the getAll function returns all items in the pokemonList array
             return pokemonList;
-        }
+          }
 
                 /** @param {*} pokemon - placeholder */
         function add (pokemon) {  // the add function adds the selected pokemon to the pokemonList array
@@ -19,7 +19,7 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
               } else {
                 console.log('pokemon cannot be pushed to pokemonList')
               }      
-       }
+          }
 
         function addListItem(pokemon) {      // the addListItem function adds a pokemon as a list item and button
                 
@@ -48,7 +48,7 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
                 // run showDetails function when user clicks button
                 button.addEventListener('click', function() {
                       showDetails(pokemon);
-                      });
+                  });
           }
         
 
@@ -67,7 +67,7 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
                 }).catch(function (e) {
                   console.error(e);
                 })
-              }
+          }
 
         function loadDetails(item) { //note: rename item to something specific within this function
           // note: rename this item to something specific to this scope
@@ -82,15 +82,14 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
                 }).catch(function (e) {
                   console.error(e);
                 });
-              }
+          }
 
         function showDetails(item){ 
                 pokemonRepository.loadDetails(item).then(function() {
                   showModal(item);
                   console.log(item);
                 });
-
-              }
+          }
               
               
 
@@ -123,8 +122,7 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
                 modalContainer.appendChild(nameElement);
                 modalContainer.appendChild(imageElement);
                 modalContainer.appendChild(heightElement);
-            
-              }
+          }
 
         function hideModal(modalContainer) {
                 modalContainer.classList.remove('is-visible');
@@ -133,23 +131,21 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
                   dialogPromiseReject();
                   dialogPromiseReject = null;
                 }
-              }
+          }
 
+        return {    // this returns an object with the value of the getAll and the add function
+              getAll: getAll,   // getAll: is the key that calls the function and returns the value of the same name (key : value)
+              add:add,       // add: is the key that calls the function and returns the value of the same name (key : value)
+              addListItem: addListItem,
+              loadList: loadList,
+              loadDetails:loadDetails,
+              showDetails:showDetails
+          }
+}) ();        // the (); makes this a self-executing function
 
-
-              return {    // this returns an object with the value of the getAll and the add function
-                getAll: getAll,   // getAll: is the key that calls the function and returns the value of the same name (key : value)
-                add:add,       // add: is the key that calls the function and returns the value of the same name (key : value)
-                addListItem: addListItem,
-                loadList: loadList,
-                loadDetails:loadDetails,
-                showDetails:showDetails
-              }
-            }) ();        // the (); makes this a self-executing function
-
-function myLoopFunction(pokemon) {   
-        console.log(pokemon.name + " is " + pokemon.height + "m tall");
-}
+// function myLoopFunction(pokemon) {   
+//         console.log(pokemon.name + " is " + pokemon.height + "m tall");
+// }
 
 pokemonRepository.loadList().then(function() { // loads data
   pokemonRepository.getAll().forEach(function (pokemon) {   // this forEach function loops over each pokemon item and runs the addListItem function for each pokemon item
