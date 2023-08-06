@@ -110,7 +110,7 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
 
                 let closeButtonElement = document.createElement('button');
                 closeButtonElement.innerText = 'Close';
-
+                closeButtonElement.addEventListener('click', hideModal);
 
             
                 let nameElement = document.createElement('h1');
