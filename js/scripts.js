@@ -88,7 +88,7 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
           }
 
         function showDetails(pokemon){ 
-                pokemonRepository.loadDetails(pokemon).then(function() {
+                pokemonRepository.loadDetails(pokemon).then(function(pokemon) {
                   showModal(pokemon);
                   console.log(pokemon);
                 });
