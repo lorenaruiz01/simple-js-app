@@ -30,7 +30,7 @@ h1 {
     display: none;
 } 
 
-  #modal-container.is-visible {
+#modal-container.is-visible {
     position: absolute;
     padding: 20px;
     box-sizing: border-box;
