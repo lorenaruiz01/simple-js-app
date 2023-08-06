@@ -100,13 +100,13 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
                 modalContainer.innerHTML = ''; // Clear any previous content
 
 
-                modalContainer.classList.add('is-visible');
-                modalContainer.classList.add('modal');
-                modalContainer.classList.add('modal-dialog');
-                modalContainer.classList.add('modal-dialog-centered');
+                // modalContainer.classList.add('is-visible');
+                // modalContainer.classList.add('modal');
+                // modalContainer.classList.add('modal-dialog');
+                // modalContainer.classList.add('modal-dialog-centered');
             
-                // work through: create a div element for modal dialog
-                let modalDialogElement = document.createElement('div')
+                // // work through: create a div element for modal dialog
+                // let modalDialogElement = document.createElement('div')
 
                 let closeButtonElement = document.createElement('button');
                 closeButtonElement.addEventListener('click', function() {
