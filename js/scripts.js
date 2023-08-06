@@ -87,10 +87,10 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
                 });
           }
 
-        function showDetails(item){ 
-                pokemonRepository.loadDetails(item).then(function() {
-                  showModal(item);
-                  console.log(item);
+        function showDetails(pokemon){ 
+                pokemonRepository.loadDetails(pokemon).then(function() {
+                  showModal(pokemon);
+                  console.log(pokemon);
                 });
           }
               
