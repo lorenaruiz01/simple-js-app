@@ -46,7 +46,7 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
                 // add 'li' to 'ul' element
                 pokemonListItem.appendChild(listItem);
                 // run showDetails function when user clicks button
-                button.addEventListener('click', function() {
+                button.addEventListener('click', function(pokemon) {
                       showDetails(pokemon);
                   });
           }
