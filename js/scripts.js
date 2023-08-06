@@ -101,7 +101,9 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
                 let modalDialogElement = document.createElement('div')
 
                 let closeButtonElement = document.createElement('button');
-                closeButtonElement.addEventListener('click', hideModal);
+                closeButtonElement.addEventListener('click', function() {
+                  hideModal(modalContainer);
+                });
             
                 let nameElement = document.createElement('h1');
                 nameElement.innerText = item.name;
