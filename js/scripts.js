@@ -121,7 +121,7 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
                 imageElement.setAttribute('src', item.imageUrl);
             
                 let heightElement = document.createElement('p');
-                heightElement.innerText = 'height : ' + item.height;
+                heightElement.innerText = 'Height: ' + item.height + 'm';
             
                 modalContainer.appendChild(closeButtonElement);
                 modalContainer.appendChild(nameElement);
