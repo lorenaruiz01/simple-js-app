@@ -92,7 +92,6 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
 
         function showModal(item) {
                 let modalContainer = document.querySelector('#modal-container');
-                console.log(modalContainer);
                 modalContainer.classList.add('is-visible');
                 modalContainer.classList.add('modal');
                 modalContainer.classList.add('modal-dialog');
