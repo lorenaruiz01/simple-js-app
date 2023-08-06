@@ -151,9 +151,8 @@ function myLoopFunction(pokemon) {
         console.log(pokemon.name + " is " + pokemon.height + "m tall");
 }
 
-pokemonRepository.loadList().then(function() {
-        // Now the data is loaded!
-pokemonRepository.getAll().forEach(function(pokemon){   // this forEach function loops over each pokemon item and runs the addListItem function for each pokemon item
-        pokemonRepository.addListItem(pokemon);   // this calls the addListItem function that's inside the pokemonRepository, passing in the pokemon as a parameter
-        });
-      });
+pokemonRepository.loadList().then(function() { // loads data
+  pokemonRepository.getAll().forEach(function (pokemon) {   // this forEach function loops over each pokemon item and runs the addListItem function for each pokemon item
+      pokemonRepository.addListItem(pokemon);   // this calls the addListItem function that's inside the pokemonRepository, passing in the pokemon as a parameter
+  });
+});
