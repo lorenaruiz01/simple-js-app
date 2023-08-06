@@ -120,7 +120,7 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
             
               }
 
-        function hideModal() {
+        function hideModal(modalContainer) {
                 modalContainer.classList.remove('is-visible');
                 let dialogPromiseReject;
                 if (dialogPromiseReject) {
