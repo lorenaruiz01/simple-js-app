@@ -18,48 +18,7 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
             return pokemonList;
           }
 
-          function addNavItem(item) { //used to add links and options to the navbar
-            let navbarNav = document.querySelector('.navbar-nav');
-            let navItem = document.createElement('li');
-            let button = document.createElement('button');
-    
-            $(button).addClass('nav-link btn btn-link').text(`Gen. ${item.gen} Pok${'\xE9'}mon`)
-                .on('click', function () {
-                    let current = document.querySelector('span.sr-only');
-                    $(current).remove();
-    
-                    changeApi(item);
-    
-                    let span = document.createElement('span');
-                    $(span).addClass('sr-only').text('(current)');
-                    button.appendChild(span);
-                });
-    
-            if (currentApi.offset === item.offset) {
-                let span = document.createElement('span');
-                $(span).addClass('sr-only').text('(current)');
-                button.appendChild(span);
-            }
-    
-            $(navItem).addClass('nav-item');
-    
-            navItem.appendChild(button);
-            navbarNav.appendChild(navItem);
-        }
-    
-        function changeApi(item) {
-            pokemonList = [];
-            currentApi = item;
-    
-            let ul = document.querySelector('.pokemon-list');
-            $(ul).html('');
-    
-            loadList().then(function () {
-                getAllPokemon().forEach(function (pokemon) {
-                    addListItem(pokemon);
-                });
-            });
-        }
+
 
                 /** @param {*} pokemon - placeholder */
         function add (pokemon) {  // the add function adds the selected pokemon to the pokemonList array
