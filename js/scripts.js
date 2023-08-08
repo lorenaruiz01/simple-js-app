@@ -18,7 +18,20 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
             return pokemonList;
           }
 
-
+          function addNavItem(gen, offset) {
+            let navItem = document.createElement('li');
+            let navLink = document.createElement('a');
+            navLink.href = '#';
+            navLink.innerText = `Generation ${gen}`;
+            navLink.addEventListener('click', function () {
+              changeApi(offset);
+              loadList();
+            });
+        
+            navItem.appendChild(navLink);
+            document.querySelector('.navbar-nav').appendChild(navItem);
+          }
+        
 
                 /** @param {*} pokemon - placeholder */
         function add (pokemon) {  // the add function adds the selected pokemon to the pokemonList array
