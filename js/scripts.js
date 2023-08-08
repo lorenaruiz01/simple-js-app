@@ -1,11 +1,65 @@
 let pokemonRepository = (function () {  // wraps the pokemonList inside of an IIFE (Immediately Invoked Function Expression)
         let pokemonList = []; // this is an array of pokemon
-        let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+        let apiUrl = [
+          { url: 'https://pokeapi.co/api/v2/pokemon/?limit=151', gen: 'I', offset: 0 },
+          { url: 'https://pokeapi.co/api/v2/pokemon/?offset=151&limit=100', gen: 'II', offset: 151 },
+          { url: 'https://pokeapi.co/api/v2/pokemon/?offset=251&limit=135', gen: 'III', offset: 251 },
+          { url: 'https://pokeapi.co/api/v2/pokemon/?offset=386&limit=107', gen: 'IV', offset: 386 },
+          { url: 'https://pokeapi.co/api/v2/pokemon/?offset=493&limit=156', gen: 'V', offset: 493 },
+          { url: 'https://pokeapi.co/api/v2/pokemon/?offset=649&limit=72', gen: 'VI', offset: 649 },
+          { url: 'https://pokeapi.co/api/v2/pokemon/?offset=721&limit=88', gen: 'VII', offset: 721 },
+          { url: 'https://pokeapi.co/api/v2/pokemon/?offset=809&limit=96', gen: 'VIII', offset: 809 },
+          { url: 'https://pokeapi.co/api/v2/pokemon/?offset=905&limit=105', gen: 'IX', offset: 905 }
+      ];
+      let currentApi = api[0];
 
 
         function getAll () {    // the getAll function returns all items in the pokemonList array
             return pokemonList;
           }
+
+          function addNavItem(item) { //used to add links and options to the navbar
+            let navbarNav = document.querySelector('.navbar-nav');
+            let navItem = document.createElement('li');
+            let button = document.createElement('button');
+    
+            $(button).addClass('nav-link btn btn-link').text(`Gen. ${item.gen} Pok${'\xE9'}mon`)
+                .on('click', function () {
+                    let current = document.querySelector('span.sr-only');
+                    $(current).remove();
+    
+                    changeApi(item);
+    
+                    let span = document.createElement('span');
+                    $(span).addClass('sr-only').text('(current)');
+                    button.appendChild(span);
+                });
+    
+            if (currentApi.offset === item.offset) {
+                let span = document.createElement('span');
+                $(span).addClass('sr-only').text('(current)');
+                button.appendChild(span);
+            }
+    
+            $(navItem).addClass('nav-item');
+    
+            navItem.appendChild(button);
+            navbarNav.appendChild(navItem);
+        }
+    
+        function changeApi(item) {
+            pokemonList = [];
+            currentApi = item;
+    
+            let ul = document.querySelector('.pokemon-list');
+            $(ul).html('');
+    
+            loadList().then(function () {
+                getAllPokemon().forEach(function (pokemon) {
+                    addListItem(pokemon);
+                });
+            });
+        }
 
                 /** @param {*} pokemon - placeholder */
         function add (pokemon) {  // the add function adds the selected pokemon to the pokemonList array
@@ -142,6 +196,8 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
         return {    // this returns an object with the value of the getAll and the add function
               getAll: getAll,   // getAll: is the key that calls the function and returns the value of the same name (key : value)
               add:add,       // add: is the key that calls the function and returns the value of the same name (key : value)
+              addNavItem: addNavItem,
+              changeApi: changeApi,
               addListItem: addListItem,
               loadList: loadList,
               loadDetails:loadDetails,
