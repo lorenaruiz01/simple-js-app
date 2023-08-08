@@ -11,7 +11,7 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
           { url: 'https://pokeapi.co/api/v2/pokemon/?offset=809&limit=96', gen: 'VIII', offset: 809 },
           { url: 'https://pokeapi.co/api/v2/pokemon/?offset=905&limit=105', gen: 'IX', offset: 905 }
       ];
-      let currentApi = apiUrl[0];
+      //let currentApi = apiUrl[0];
 
 
         function getAll () {    // the getAll function returns all items in the pokemonList array
