@@ -49,8 +49,8 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
                 button.innerText = pokemon.name;
                 button.classList.add("list-button", "btn", "btn-primary", "button-class");
                 button.type = "button";
-                button.setAttribute("data-toggle", "modal");
-                button.setAttribute("data-target", "#modal-container");
+                // button.setAttribute("data-toggle", "modal");
+                // button.setAttribute("data-target", "#modal-container");
                 // $(button).addClass("list-button btn btn-primary button-class").attr("type", "button").attr("data-toggle", "modal").attr("data-target", "modal-container");
                 
                 // add class to listItem element
