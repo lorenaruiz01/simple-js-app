@@ -182,7 +182,6 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
               getAll: getAll,   // getAll: is the key that calls the function and returns the value of the same name (key : value)
               add:add,       // add: is the key that calls the function and returns the value of the same name (key : value)
               addNavItem: addNavItem,
-              changeApi: changeApi,
               addListItem: addListItem,
               loadList: loadList,
               loadDetails:loadDetails,
