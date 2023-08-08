@@ -79,31 +79,38 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
                 button.addEventListener('click', function(pokemon) {
                       showDetails(pokemon);
                   });
-          }
+        }
         
 
-
-          function loadList() {
-            let currentApi = apiUrl.find((api) => api.offset === offset);
-        
-            return fetch(currentApi.url)
-              .then(function (response) {
-                return response.json();
-              })
-              .then(function (json) {
-                pokemonList = json.results.map((item) => {
-                  return {
-                    name: item.name,
-                    detailsUrl: item.url,
-                  };
-                });
-        
-                displayPokemonButtons(); // Call function to display the buttons
-              })
-              .catch(function (e) {
-                console.error(e);
+        function loadList() {
+          let currentApi = apiUrl.find((api) => api.offset === offset);
+      
+          return fetch(currentApi.url)
+            .then(function (response) {
+              return response.json();
+            })
+            .then(function (json) {
+              pokemonList = json.results.map((item) => {
+                return {
+                  name: item.name,
+                  detailsUrl: item.url,
+                };
               });
-          }
+      
+              displayPokemonButtons(); // Call function to display the buttons
+            })
+            .catch(function (e) {
+              console.error(e);
+            });
+        }
+
+        function displayPokemonButtons() {
+          document.querySelector('.pokemon-list').innerHTML = ''; // Clear previous buttons
+      
+          pokemonList.forEach(function (pokemon) {
+            addListItem(pokemon);
+          });
+        }
 
         function loadDetails(pokemon) { 
                 let url = pokemon.detailsUrl;
