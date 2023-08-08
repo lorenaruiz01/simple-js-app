@@ -71,7 +71,7 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
 
 
         function loadList() {
-                return fetch(apiUrl).then(function (response) {
+                return fetch(apiUrl[0].url).then(function (response) {
                   return response.json();
                 }).then(function (json) {
                   json.results.forEach(function (item) {
@@ -81,7 +81,13 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
                     };
                     add(pokemon); // calling add function and passing pokemon as parameter
                   });
-                }).catch(function (e) {
+                }).then(function(){
+                  // call loadDetails for each pokemon in the list to populate their details
+                  getAll().forEach(function (pokemon){
+                    loadDetails(pokemon);
+                  });
+                })
+                .catch(function (e) {
                   console.error(e);
                 })
           }
