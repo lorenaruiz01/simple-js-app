@@ -190,6 +190,19 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
 }) ();        // the (); makes this a self-executing function
 
 
+
+pokemonRepository.loadList().then(function () {
+  pokemonRepository.addNavItem('I', 0);
+  pokemonRepository.addNavItem('II', 151);
+  pokemonRepository.addNavItem('III', 251);
+  pokemonRepository.addNavItem('IV', 386);
+  pokemonRepository.addNavItem('V', 493);
+  pokemonRepository.addNavItem('VI', 649);
+  pokemonRepository.addNavItem('VII', 721);
+  pokemonRepository.addNavItem('VIII', 809);
+  pokemonRepository.addNavItem('IX', 905);
+});
+
 pokemonRepository.loadList().then(function() { // loads data
   pokemonRepository.getAll().forEach(function (pokemon) {   // this forEach function loops over each pokemon item and runs the addListItem function for each pokemon item
       pokemonRepository.addListItem(pokemon);   // this calls the addListItem function that's inside the pokemonRepository, passing in the pokemon as a parameter
