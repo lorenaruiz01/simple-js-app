@@ -83,26 +83,26 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
         
 
 
-        function loadList() {
-                return fetch(apiUrl[0].url).then(function (response) {
-                  return response.json();
-                }).then(function (json) {
-                  json.results.forEach(function (item) {
-                    let pokemon = {
-                      name: item.name,
-                      detailsUrl: item.url
-                    };
-                    add(pokemon); // calling add function and passing pokemon as parameter
-                  });
-                }).then(function(){
-                  // call loadDetails for each pokemon in the list to populate their details
-                  getAll().forEach(function (pokemon){
-                    loadDetails(pokemon);
-                  });
-                })
-                .catch(function (e) {
-                  console.error(e);
-                })
+          function loadList() {
+            let currentApi = apiUrl.find((api) => api.offset === offset);
+        
+            return fetch(currentApi.url)
+              .then(function (response) {
+                return response.json();
+              })
+              .then(function (json) {
+                pokemonList = json.results.map((item) => {
+                  return {
+                    name: item.name,
+                    detailsUrl: item.url,
+                  };
+                });
+        
+                displayPokemonButtons(); // Call function to display the buttons
+              })
+              .catch(function (e) {
+                console.error(e);
+              });
           }
 
         function loadDetails(pokemon) { 
