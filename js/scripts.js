@@ -5,29 +5,26 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
             return pokemon;
         }
 
-        function loadList() {
+        async function loadList() {
           let url = `https://pokeapi.co/api/v2/pokemon/?limit=151`;
 
       
-          return fetch(url)
-            .then(function (response) {
-              return response.json();
-            })
-            .then(function (json) {
-              pokemon = json.results.map((item, index) => {
-                return {
-                  name: item.name,
-                  id: index  + 1,
-                  detailsUrl: item.url,
-                  image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index+ 1}.png`
-                };
-              });
-      
-              displayPokemonButtons(); // Call function to display the buttons
-            })
-            .catch(function (e) {
-              console.error(e);
+          try {
+            const response = await fetch(url);
+            const json = await response.json();
+            pokemon = json.results.map((item, index) => {
+              return {
+                name: item.name,
+                id: index + 1,
+                detailsUrl: item.url,
+                image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index + 1}.png`
+              };
             });
+
+            displayPokemonButtons(); // Call function to display the buttons
+          } catch (e) {
+            console.error(e);
+          }
 
         }
         
