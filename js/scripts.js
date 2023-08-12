@@ -7,9 +7,9 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
         }
 
         function loadList() {
-          let currentApi = `https://pokeapi.co/api/v2/pokemon/${id}`;
+          let url = apiUrl;
       
-          return fetch(currentApi.url)
+          return fetch(url)
             .then(function (response) {
               return response.json();
             })
@@ -31,6 +31,13 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
         }
         console.log(loadList);
 
+        function displayPokemonButtons() {
+          document.querySelector('.pokemon-list').innerHTML = ''; // Clear previous buttons
+      
+          pokemonList.forEach(function (pokemon) {
+            addListItem(pokemon);
+          });
+        }
 
         function addNavItem(gen, offset) {
           let navItem = document.createElement('li');
@@ -99,13 +106,7 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
         
 
 
-        function displayPokemonButtons() {
-          document.querySelector('.pokemon-list').innerHTML = ''; // Clear previous buttons
-      
-          pokemonList.forEach(function (pokemon) {
-            addListItem(pokemon);
-          });
-        }
+        
 
         function loadDetails(pokemon) { 
                 let url = pokemon.detailsUrl;
