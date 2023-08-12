@@ -30,7 +30,7 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
             });
 
         }
-        console.log(loadList);
+        
 
         function displayPokemonButtons() {
          //  document.querySelector('.pokemon-list').innerHTML = ''; // Clear previous buttons
