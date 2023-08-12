@@ -93,6 +93,7 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
               pokemonList = json.results.map((item) => {
                 return {
                   name: item.name,
+                  id: item.id,
                   detailsUrl: item.url,
                 };
               });
@@ -102,7 +103,11 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
             .catch(function (e) {
               console.error(e);
             });
+
         }
+        console.log(loadList);
+
+
 
         function displayPokemonButtons() {
           document.querySelector('.pokemon-list').innerHTML = ''; // Clear previous buttons
