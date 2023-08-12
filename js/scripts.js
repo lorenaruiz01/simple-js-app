@@ -1,8 +1,8 @@
 let pokemonRepository = (function () {  // wraps the pokemonList inside of an IIFE (Immediately Invoked Function Expression)
-        let pokemonList = []; // this is an array of pokemon
+        let pokemon = []; // this is an array of pokemon
         
         function getAll () {    // the getAll function returns all items in the pokemonList array
-            return pokemonList;
+            return pokemon;
         }
 
         function loadList() {
@@ -14,7 +14,7 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
               return response.json();
             })
             .then(function (json) {
-              pokemonList = json.results.map((item, index) => {
+              pokemon = json.results.map((item, index) => {
                 return {
                   name: item.name,
                   id: index  + 1,
@@ -33,9 +33,17 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
         console.log(loadList);
 
         function displayPokemonButtons() {
-          document.querySelector('.pokemon-list').innerHTML = ''; // Clear previous buttons
+         //  document.querySelector('.pokemon-list').innerHTML = ''; // Clear previous buttons
+  
+          const pokemonHTMLString = pokemon.map ( (pokemon) => 
+              `<li class="card" onclick="selectPokemon(${pokemon.id})" >
+                  <img class="card-image" src="${pokemon.image}"/>
+                  <h2 class="card-title">#${pokemon.id} ${pokemon.name}</h2>
+              </li>`
+              ).join('');
+          pokedex.innerHTML = pokemonHTMLString;
       
-          pokemonList.forEach(function (pokemon) {
+          pokemon.forEach(function (pokemon) {
             addListItem(pokemon);
           });
         }
