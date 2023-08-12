@@ -4,21 +4,47 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
 
         function getAll () {    // the getAll function returns all items in the pokemonList array
             return pokemonList;
-          }
+        }
 
-          function addNavItem(gen, offset) {
-            let navItem = document.createElement('li');
-            let navLink = document.createElement('a');
-            navLink.href = '#';
-            navLink.innerText = `Generation ${gen}`;
-            navLink.addEventListener('click', function () {
-              changeApi(offset);
-              loadList();
+        function loadList() {
+          let currentApi = `https://pokeapi.co/api/v2/pokemon/${id}`;
+      
+          return fetch(currentApi.url)
+            .then(function (response) {
+              return response.json();
+            })
+            .then(function (json) {
+              pokemonList = json.results.map((item, index) => {
+                return {
+                  name: item.name,
+                  id: index  + 1,
+                  detailsUrl: item.url,
+                };
+              });
+      
+              displayPokemonButtons(); // Call function to display the buttons
+            })
+            .catch(function (e) {
+              console.error(e);
             });
-        
-            navItem.appendChild(navLink);
-            document.querySelector('.navbar-nav').appendChild(navItem);
-          }
+
+        }
+        console.log(loadList);
+
+
+        function addNavItem(gen, offset) {
+          let navItem = document.createElement('li');
+          let navLink = document.createElement('a');
+          navLink.href = '#';
+          navLink.innerText = `Generation ${gen}`;
+          navLink.addEventListener('click', function () {
+            changeApi(offset);
+            loadList();
+          });
+      
+          navItem.appendChild(navLink);
+          document.querySelector('.navbar-nav').appendChild(navItem);
+        }
         
 
                 /** @param {*} pokemon - placeholder */
@@ -70,31 +96,7 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
         }
         
 
-        function loadList() {
-          let currentApi = `https://pokeapi.co/api/v2/pokemon/${id}`;
-      
-          return fetch(currentApi.url)
-            .then(function (response) {
-              return response.json();
-            })
-            .then(function (json) {
-              pokemonList = json.results.map((item, index) => {
-                return {
-                  name: item.name,
-                  id: index  + 1,
-                  detailsUrl: item.url,
-                };
-              });
-      
-              displayPokemonButtons(); // Call function to display the buttons
-            })
-            .catch(function (e) {
-              console.error(e);
-            });
-
-        }
-        console.log(loadList);
-
+        
 
 
         function displayPokemonButtons() {
