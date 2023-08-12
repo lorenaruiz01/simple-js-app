@@ -90,10 +90,10 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
               return response.json();
             })
             .then(function (json) {
-              pokemonList = json.results.map((item) => {
+              pokemonList = json.results.map((item, index) => {
                 return {
                   name: item.name,
-                  id: item.id,
+                  id: index  + 1,
                   detailsUrl: item.url,
                 };
               });
