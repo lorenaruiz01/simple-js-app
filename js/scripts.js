@@ -11,7 +11,7 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
       
           return fetch(url)
             .then(function (response) {
-              return response.json();
+              return data = response.json();
             })
             .then(function (json) {
               pokemon = json.results.map((item, index) => {
@@ -30,7 +30,7 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
             });
 
         }
-        console.log(loadList);
+       
 
         function displayPokemonButtons() {
          //  document.querySelector('.pokemon-list').innerHTML = ''; // Clear previous buttons
@@ -41,7 +41,7 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
                   <h2 class="card-title">#${pokemon.id} ${pokemon.name}</h2>
               </li>`
               ).join('');
-          pokedex.innerHTML = pokemonHTMLString;
+          pokemonRepository.innerHTML = pokemonHTMLString;
       
           pokemon.forEach(function (pokemon) {
             addListItem(pokemon);
