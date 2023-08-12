@@ -7,10 +7,10 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
 
         async function loadList() {
           const url = `https://pokeapi.co/api/v2/pokemon/?limit=151`;
+          const response = await fetch(url);
           
-      
           try {
-            const response = await fetch(url);
+            
             const json = await response.json();
             pokemon = json.results.map((item, index) => {
               return {
