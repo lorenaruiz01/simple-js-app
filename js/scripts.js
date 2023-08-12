@@ -7,26 +7,14 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
 
         async function loadList() {
           const url = `https://pokeapi.co/api/v2/pokemon/?limit=151`;
-          const response = await fetch(url);
-          
-          try {
-            
-            const json = await response.json();
-            pokemon = json.results.map((item, index) => {
-              return {
-                name: item.name,
-                id: index + 1,
-                detailsUrl: item.url,
-                image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index + 1}.png`
-              };
-            });
-
-            displayPokemonButtons(); // Call function to display the buttons
-          } catch (e) {
-            console.error(e);
-          }
-
-        }
+          const responseFromUrl = await fetch(url);
+          const data = await responseFromUrl.json();
+          const pokemon = data.results.map( (result, index) => ({
+            ...result,
+            id: index + 1,
+            image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index+ 1}.png`
+        }));
+        displayPokemonButtons(pokemon);
         
 
         function displayPokemonButtons() {
@@ -171,7 +159,7 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
 
 
 
-
+loadList();
 
 pokemonRepository.loadList().then(function() { // loads data
   pokemonRepository.getAll().forEach(function (pokemon) {   // this forEach function loops over each pokemon item and runs the addListItem function for each pokemon item
