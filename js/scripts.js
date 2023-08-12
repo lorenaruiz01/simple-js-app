@@ -18,7 +18,6 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
         
 
         function displayPokemonCards() {
-         //  document.querySelector('.pokemon-list').innerHTML = ''; // Clear previous buttons
   
           const pokemonHTMLString = pokemon.map ( (pokemon) => 
               `<li class="card" onclick="selectPokemon(${pokemon.id})" >
@@ -26,12 +25,12 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
                   <h2 class="card-title">#${pokemon.id} ${pokemon.name}</h2>
               </li>`
               ).join('');
-          pokemonRepository.innerHTML = pokemonHTMLString;
+          pokemon.innerHTML = pokemonHTMLString;
       
           // pokemon.forEach(function (pokemon) {
           //   addListItem(pokemon);
           // });
-        }
+        };
 
         
         
