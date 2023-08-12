@@ -18,6 +18,7 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
                 return {
                   name: item.name,
                   id: index  + 1,
+                  detailsUrl: item.url,
                   image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index+ 1}.png`
                 };
               });
@@ -29,7 +30,7 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
             });
 
         }
-       
+        console.log(loadList);
 
         function displayPokemonButtons() {
          //  document.querySelector('.pokemon-list').innerHTML = ''; // Clear previous buttons
