@@ -26,10 +26,6 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
               </li>`
               ).join('');
           pokemon.innerHTML = pokemonHTMLString;
-      
-          // pokemon.forEach(function (pokemon) {
-          //   addListItem(pokemon);
-          // });
         };
 
         
