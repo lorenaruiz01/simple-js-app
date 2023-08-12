@@ -83,7 +83,7 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
         
 
         function loadList() {
-          let currentApi = apiUrl.find((api) => api.offset === offset);
+          let currentApi = `https://pokeapi.co/api/v2/pokemon/${id}`;
       
           return fetch(currentApi.url)
             .then(function (response) {
