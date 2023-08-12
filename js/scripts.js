@@ -1,16 +1,6 @@
 let pokemonRepository = (function () {  // wraps the pokemonList inside of an IIFE (Immediately Invoked Function Expression)
         let pokemonList = []; // this is an array of pokemon
-        let apiUrl = [
-          { url: 'https://pokeapi.co/api/v2/pokemon/?limit=151', gen: 'I', offset: 0 },
-          { url: 'https://pokeapi.co/api/v2/pokemon/?offset=151&limit=100', gen: 'II', offset: 151 },
-          { url: 'https://pokeapi.co/api/v2/pokemon/?offset=251&limit=135', gen: 'III', offset: 251 },
-          { url: 'https://pokeapi.co/api/v2/pokemon/?offset=386&limit=107', gen: 'IV', offset: 386 },
-          { url: 'https://pokeapi.co/api/v2/pokemon/?offset=493&limit=156', gen: 'V', offset: 493 },
-          { url: 'https://pokeapi.co/api/v2/pokemon/?offset=649&limit=72', gen: 'VI', offset: 649 },
-          { url: 'https://pokeapi.co/api/v2/pokemon/?offset=721&limit=88', gen: 'VII', offset: 721 },
-          { url: 'https://pokeapi.co/api/v2/pokemon/?offset=809&limit=96', gen: 'VIII', offset: 809 },
-          { url: 'https://pokeapi.co/api/v2/pokemon/?offset=905&limit=105', gen: 'IX', offset: 905 }
-      ];
+        let apiUrl = `https://pokeapi.co/api/v2/pokemon/?limit=151`;
       //let currentApi = apiUrl[0];
 
 
