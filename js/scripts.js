@@ -11,7 +11,7 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
       
           return fetch(url)
             .then(function (response) {
-              return data = response.json();
+              return response.json();
             })
             .then(function (json) {
               pokemon = json.results.map((item, index) => {
