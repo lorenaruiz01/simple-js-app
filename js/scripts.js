@@ -14,10 +14,10 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
             id: index + 1,
             image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index+ 1}.png`
         }));
-        displayPokemonButtons(pokemon);
+        displayPokemonCards(pokemon);
         
 
-        function displayPokemonButtons() {
+        function displayPokemonCards() {
          //  document.querySelector('.pokemon-list').innerHTML = ''; // Clear previous buttons
   
           const pokemonHTMLString = pokemon.map ( (pokemon) => 
@@ -28,9 +28,9 @@ let pokemonRepository = (function () {  // wraps the pokemonList inside of an II
               ).join('');
           pokemonRepository.innerHTML = pokemonHTMLString;
       
-          pokemon.forEach(function (pokemon) {
-            addListItem(pokemon);
-          });
+          // pokemon.forEach(function (pokemon) {
+          //   addListItem(pokemon);
+          // });
         }
 
         
