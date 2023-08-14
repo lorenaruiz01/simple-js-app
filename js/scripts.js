@@ -1,5 +1,5 @@
 let pokemonRepository = (function () {  // wraps the pokemonList inside of an IIFE (Immediately Invoked Function Expression)
-        let pokemon = []; // this is an array of pokemon
+        let pokemonList = []; // empty array of pokemon
         
         function getAll () {    // the getAll function returns all items in the pokemonList array
             return pokemon;
