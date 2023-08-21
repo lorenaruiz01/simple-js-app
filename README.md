@@ -8,8 +8,9 @@
 
 ## To Do: 
 1. Center modal to center of screen
-2. Add 'esc' key close event to listItem event listener
-3. Add 'back to top' button with HTML, CSS, and JS
-4. Add cache code to loadList function (or loadDetails function?)
-5. Extra: add 'abilities' section with a 'See more/See less' event handler
-6. implement bootstrap and jQuery
+2. Move Close button in modal to top right of modal
+3. Add 'esc' key close event to listItem event listener
+4. Add 'back to top' button with HTML, CSS, and JS
+5. Add cache code to loadList function (or loadDetails function?)
+6. Extra: add 'abilities' section with a 'See more/See less' event handler
+7. implement bootstrap and jQuery
