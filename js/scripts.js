@@ -20,7 +20,7 @@ let pokemonRepository = (function () {                                  // wrapp
     return pokemonList;
   }
 
-  const pokeCache = {};                                                   
+  const pokeCache = {};                                                   // use this to store chached pokemon information 
 
   
   function addListItem(pokemon) {                                         // the addListItem function adds a pokemon as a list item and button
