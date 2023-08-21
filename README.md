@@ -11,3 +11,4 @@
 2. Add 'back to top' button with HTML, CSS, and JS
 3. Add cache code to loadList function (or loadDetails function?)
 4. Extra: add 'abilities' section with a 'See more/See less' event handler
+5. implement bootstrap and jQuery
