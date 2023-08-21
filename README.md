@@ -14,3 +14,4 @@
 5. Add cache code to loadList function (or loadDetails function?)
 6. Extra: add 'abilities' section with a 'See more/See less' event handler
 7. implement bootstrap and jQuery
+8. Add more generations of pokemon?
