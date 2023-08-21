@@ -12,7 +12,7 @@
 3. Add 'esc' key close event to listItem event listener
 4. Add 'back to top' button with HTML, CSS, and JS
 5. Add cache code to loadList function (or loadDetails function?)
-6. Extra: add 'abilities' section with a 'See more/See less' event handler
-7. implement bootstrap and jQuery
-8. Add more generations of pokemon?
-9. Implement slides for front and back images inside modal
+6. Implement bootstrap and jQuery
+7. Extra: add 'abilities' section with a 'See more/See less' event handler
+8. Extra: Add more generations of pokemon?
+9. Extra: Implement slides for front and back images inside modal
