@@ -20,7 +20,7 @@ let pokemonRepository = (function () {                                  // wrapp
     return pokemonList;
   }
 
-  const pokeCache = {};
+  const pokeCache = {};                                                   
 
   
   function addListItem(pokemon) {                                         // the addListItem function adds a pokemon as a list item and button
@@ -96,51 +96,51 @@ let pokemonRepository = (function () {                                  // wrapp
   // Displays the modal with pokemon details
   function showModal(pokemon) {
       let modalContainer = document.querySelector('#modal-container');
-      modalContainer.innerHTML =''                                    // clears existing modal content
+      modalContainer.innerHTML =''                                        // clears existing modal content
       
 
-      let modal = document.createElement('div');                      // creates new div to hold modal with pokemon info
-      modal.classList.add('modal');                                   // adds class of pokemon-list-item to newly created div
+      let modal = document.createElement('div');                          // creates new div to hold modal with pokemon info
+      modal.classList.add('modal');                                       // adds class of pokemon-list-item to newly created div
 
       let pokemonCard = document.createElement('div');
       pokemonCard.classList.add('pokemon-card');
 
-      let closeButtonElement = document.createElement('button');      // create a button element
-      closeButtonElement.classList.add('modal-close');                // add class of modal-close to newly created button
-      closeButtonElement.innerText = 'Close';                         // set inner text of button to 'Close'
-      closeButtonElement.addEventListener('click', hideModal);        // hide modal when user clicks button    
+      let closeButtonElement = document.createElement('button');          // create a button element
+      closeButtonElement.classList.add('modal-close');                    // add class of modal-close to newly created button
+      closeButtonElement.innerText = 'Close';                             // set inner text of button to 'Close'
+      closeButtonElement.addEventListener('click', hideModal);            // hide modal when user clicks button    
 
       
-      let titleElement = document.createElement('h2');                // create a title element for modal
-      titleElement.innerText = `#${pokemon.id} ${pokemon.name}`;      // add pokemon name to modal title
+      let titleElement = document.createElement('h2');                    // create a title element for modal
+      titleElement.innerText = `#${pokemon.id} ${pokemon.name}`;          // add pokemon name to modal title
 
-      let imageElement = document.createElement('img');               // creates element to hold image
-      imageElement.classList.add('modal-img');                        // add modal-img class to modal 
-      imageElement.src = pokemon.imageUrl;                            // link pokemon image to modal
+      let imageElement = document.createElement('img');                   // creates element to hold image
+      imageElement.classList.add('modal-img');                            // add modal-img class to modal 
+      imageElement.src = pokemon.imageUrl;                                // link pokemon image to modal
 
       let imageElementBack = document.createElement('img');
       imageElementBack.classList.add('modal-img');
       imageElementBack.src = pokemon.imageUrlBack;
 
-      let contentElement = document.createElement('p');               // create a new paragraph element within modal
-      contentElement.innerText = 'Height: ' + pokemon.height + 'm';   // concatenate height details
+      let contentElement = document.createElement('p');                   // create a new paragraph element within modal
+      contentElement.innerText = 'Height: ' + pokemon.height + 'm';       // concatenate height details
 
       let typesElement = document.createElement('p');
-      typesElement.innerText = 'Types: ' + pokemon.types;             // create new paragraph element within modal
+      typesElement.innerText = 'Types: ' + pokemon.types;                 // create new paragraph element within modal
 
-      pokemonCard.appendChild(closeButtonElement);                    // add close button to modal
-      pokemonCard.appendChild(titleElement);                          // add pokemon name to modal
-      pokemonCard.appendChild(imageElement);                          // add pokemon image to modal
-      pokemonCard.appendChild(imageElementBack);                      // add pokemon second image to modal
-      pokemonCard.appendChild(contentElement);                        // add pokemon height to modal
-      pokemonCard.appendChild(typesElement);                          // add pokemon types to modal
-      modal.appendChild(pokemonCard);                                 // add pokemon card to modal
-      modalContainer.appendChild(modal);                              // add modal to modal container
+      pokemonCard.appendChild(closeButtonElement);                        // add close button to modal
+      pokemonCard.appendChild(titleElement);                              // add pokemon name to modal
+      pokemonCard.appendChild(imageElement);                              // add pokemon image to modal
+      pokemonCard.appendChild(imageElementBack);                          // add pokemon second image to modal
+      pokemonCard.appendChild(contentElement);                            // add pokemon height to modal
+      pokemonCard.appendChild(typesElement);                              // add pokemon types to modal
+      modal.appendChild(pokemonCard);                                     // add pokemon card to modal
+      modalContainer.appendChild(modal);                                  // add modal to modal container
       
       modalContainer.classList.add('is-visible');
-      modalContainer.addEventListener('click', (e) => {                        // since this is also triggered when clicking inside the modal, 
+      modalContainer.addEventListener('click', (e) => {                   // since this is also triggered when clicking inside the modal, 
           let target = e.target;                                      
-          if (target === modalContainer) {                                     // only close it if the user clicks directly on the overlay
+          if (target === modalContainer) {                                // only close it if the user clicks directly on the overlay
               hideModal();
           };
       })
@@ -154,9 +154,9 @@ let pokemonRepository = (function () {                                  // wrapp
   }
 
 
-  return {                                                            // this returns an object with the value of the getAll and the add function
-    getAll: getAll,                                                   // getAll: is the key that calls the function and returns the value of the same name (key : value)
-    add:add,                                                          // add: is the key that calls the function and returns the value of the same name (key : value)
+  return {                                                                // this returns an object with the value of the getAll and the add function
+    getAll: getAll,                                                       // getAll: is the key that calls the function and returns the value of the same name (key : value)
+    add:add,                                                              // add: is the key that calls the function and returns the value of the same name (key : value)
     loadList: loadList,
     loadDetails: loadDetails,
     addListItem: addListItem, 
@@ -164,7 +164,7 @@ let pokemonRepository = (function () {                                  // wrapp
     showModal: showModal,
     hideModal: hideModal
   }
-}) ();                                                                // the (); makes this a self-executing function
+}) ();                                                                    // the (); makes this a self-executing function
 
 
 pokemonRepository.loadList().then(function() {
