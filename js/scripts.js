@@ -1,9 +1,9 @@
 let pokemonRepository = (function () {                                  // wrapping pokemonList array inside of an IIFE (Immediately Invoked Function Expression)
-  let pokemonList = [];                                               // an empty array of pokemon objects
+  let pokemonList = [];                                                 // an empty array of pokemon objects
 
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=151';
 
-  function add (pokemon) {                                            // the add function adds the selected pokemon to the array
+  function add (pokemon) {                                              // the add function adds the selected pokemon to the array
       pokemonList.push(pokemon)
   //   if (typeof pokemon === 'object' &&                                // checks whether pokemon is an object
   //     'name' in pokemon &&                                            // checks that pokemon object includes name key 
@@ -13,27 +13,27 @@ let pokemonRepository = (function () {                                  // wrapp
   //   pokemonList.push(pokemon);
   // } else {
   //   console.log('pokemon cannot be pushed to pokemonList');
-  // }  
+  // }                                                                   
   }
 
-  function getAll () {                                                // the getAll function returns all items in the pokemonList array
+  function getAll () {                                                    // the getAll function returns all items in the pokemonList array
     return pokemonList;
   }
 
   const pokeCache = {};
 
   
-  function addListItem(pokemon) {                                     // the addListItem function adds a pokemon as a list item and button
-    let pokemonList = document.querySelector('.pokemon-list');        // assign ul element to pokemonList variable
+  function addListItem(pokemon) {                                         // the addListItem function adds a pokemon as a list item and button
+    let pokemonList = document.querySelector('.pokemon-list');            // assign ul element to pokemonList variable
     
-    let listItem = document.createElement('li');                      // create an li element
-    listItem.classList.add('pokemon-list-item');                      // add 'pokemon-list-item' class to button
+    let listItem = document.createElement('li');                          // create an li element
+    listItem.classList.add('pokemon-list-item');                          // add 'pokemon-list-item' class to button
     listItem.innerHTML =  ` 
                               <img src=${pokemon.image}>                                  
                               <h2>#${pokemon.id} ${pokemon.name}</h2>
-                          `                                           // add the pokemon's image, number, and name to the button
-    pokemonList.appendChild(listItem);                                // add listItem pokemon button to pokemonList
-    listItem.addEventListener('click', () => {                        // show pokemon details when user clicks on pokemon button
+                          `                                               // add the pokemon's image, number, and name to the button
+    pokemonList.appendChild(listItem);                                    // add listItem pokemon button to pokemonList
+    listItem.addEventListener('click', () => {                            // show pokemon details when user clicks on pokemon button
       // if(!pokeCache[pokemon.id]){
       //     const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
       //     const response = fetch(url);
