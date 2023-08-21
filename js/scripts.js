@@ -13,7 +13,7 @@ let pokemonRepository = (function () {                                  // wrapp
   //   pokemonList.push(pokemon);
   // } else {
   //   console.log('pokemon cannot be pushed to pokemonList');
-  // }                                                                   
+  // }                                                                   // for some reason, the pokemon is not pushed if I uncommment this if-else conditiona statement
   }
 
   function getAll () {                                                    // the getAll function returns all items in the pokemonList array
