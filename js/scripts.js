@@ -3,7 +3,7 @@ let pokemonRepository = (function () {                                  // wrapp
 
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=151';
 
-  function add (pokemon) {                                              // the add function adds the selected pokemon to the array
+  function add (pokemon) {                                               // the add function adds the selected pokemon to the array
       pokemonList.push(pokemon)
   //   if (typeof pokemon === 'object' &&                                // checks whether pokemon is an object
   //     'name' in pokemon &&                                            // checks that pokemon object includes name key 
