@@ -152,3 +152,8 @@ button{
    transform: translateY(-1px);
    box-shadow: 0px 1px 2px rgb(199, 199, 213);
 }
+
+#back2TopBtn {
+    display: none;              /* hidden by default */
+    
+}
