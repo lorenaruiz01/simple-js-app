@@ -155,5 +155,5 @@ button{
 
 #back2TopBtn {
     display: none;              /* hidden by default */
-    
+    position: fixed;            /* fixed/sticky position */
 }
