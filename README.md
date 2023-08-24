@@ -7,7 +7,8 @@
 4. Which API the project uses
 
 ## To Do: 
-1. Center modal to center of screen
+1. Fix logo image to show up on page from github
+Center modal to center of screen
 2. Move Close button in modal to top right of modal
 3. Add 'esc' key close event to listItem event listener
 4. Add 'back to top' button with HTML, CSS, and JS
