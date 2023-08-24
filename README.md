@@ -1,4 +1,4 @@
-# Work In Progress: simple-js-app
+# Work In Progress: simple-js-app (Pokedex)
 
 ## Project Outline 
 1. Project description
@@ -14,6 +14,7 @@
 - [ ] Add 'back to top' button with HTML, CSS, and JS
 - [ ] Add cache code to loadList function (or loadDetails function?)
 - [ ] Implement bootstrap and jQuery
+- [ ] Update **Project Outline** section
 - [ ] \(Extra) Add 'abilities' section with a 'See more/See less' event handler
 - [ ] \(Extra) Add more generations of pokemon?
 - [ ] \(Extra) Implement slides for front and back images inside modal
