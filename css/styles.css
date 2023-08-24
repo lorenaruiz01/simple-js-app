@@ -156,4 +156,6 @@ button{
 #back2TopBtn {
     display: none;              /* hidden by default */
     position: fixed;            /* fixed/sticky position */
+    bottom: 20px;               /* place button at bottom of page */
+    right: 30px;                /* place button 30px from the right */
 }
