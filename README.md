@@ -7,7 +7,7 @@
 4. Which API the project uses
 
 ## To Do: 
-1. ~~Fix logo image to show up on page from github~~
+- [x] ~~Fix logo image to show up on page from github~~
 2. Center modal to center of screen
 3. Move Close button in modal to top right of modal
 4. Add 'esc' key close event to listItem event listener
