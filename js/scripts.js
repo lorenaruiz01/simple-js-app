@@ -188,5 +188,9 @@ function scrollFunction(){
     }
 }
 
+function backToTopFunction() {                                            // When the user clicks on the button, scroll to the top of the document
+    document.body.scrollTop = 0;                                          // For Safari
+    
+}
 
 back2TopBtn
