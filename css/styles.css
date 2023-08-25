@@ -160,4 +160,6 @@ button{
     right: 30px;                /* place button 30px from the right */
     z-index: 99;                /* Make sure it does not overlap */
     border: none;               /* Remove borders */
+    outline: none;              /* Remove outline */
+
 }
