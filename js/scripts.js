@@ -173,5 +173,12 @@ pokemonRepository.loadList().then(function() {
   }); 
 });
 
-// Get the button:
-let back2TopBtn = document.getElementById("back2TopBtn");
+                                        
+let back2TopBtn = document.getElementById("back2TopBtn");               // Get the button
+
+window.onscroll = function() {                                          // When the user scrolls down 20px from the top of the document, show the button
+    scrollFunction()
+}; 
+
+
+back2TopBtn
