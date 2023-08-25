@@ -163,5 +163,6 @@ button{
     outline: none;                  /* Remove outline */
     background-color: lavender;   /* Set a background color */
     color: black;                 /* Text color */
+    cursor: pointer;                /* Add a mouse pointer on hover */
     
 }
