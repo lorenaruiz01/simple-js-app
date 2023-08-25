@@ -182,7 +182,7 @@ window.onscroll = function() {                                          // When 
 
 function scrollFunction(){
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
-        
+        back2TopBtn.style.display = "block";
     }
 }
 
