@@ -172,3 +172,6 @@ pokemonRepository.loadList().then(function() {
       pokemonRepository.addListItem(pokemon);
   }); 
 });
+
+// Get the button:
+let back2TopBtn = document.getElementById("back2TopBtn");
