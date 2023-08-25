@@ -162,5 +162,6 @@ button{
     border: none;                   /* Remove borders */
     outline: none;                  /* Remove outline */
     background-color: lavender;   /* Set a background color */
+    color: black;                 /* Text color */
     
 }
