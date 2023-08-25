@@ -154,12 +154,13 @@ button{
 }
 
 #back2TopBtn {
-    display: none;              /* hidden by default */
-    position: fixed;            /* fixed/sticky position */
-    bottom: 20px;               /* place button at bottom of page */
-    right: 30px;                /* place button 30px from the right */
-    z-index: 99;                /* Make sure it does not overlap */
-    border: none;               /* Remove borders */
-    outline: none;              /* Remove outline */
-
+    display: none;                  /* hidden by default */
+    position: fixed;                /* fixed/sticky position */
+    bottom: 20px;                   /* place button at bottom of page */
+    right: 30px;                    /* place button 30px from the right */
+    z-index: 99;                    /* Make sure it does not overlap */
+    border: none;                   /* Remove borders */
+    outline: none;                  /* Remove outline */
+    background-color: lavender;   /* Set a background color */
+    
 }
