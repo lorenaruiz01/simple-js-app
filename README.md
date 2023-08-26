@@ -11,7 +11,7 @@
 - [ ] Center modal to center of screen
 - [ ] Move Close button in modal to top right of modal
 - [ ] Add 'esc' key close event to listItem event listener
-- [x] Add 'back to top' button with HTML, CSS, and JS
+- [x] ~~Add 'back to top' button with HTML, CSS, and JS~~
 - [ ] Add cache code to loadList function (or loadDetails function?)
 - [ ] Implement bootstrap and jQuery
 - [ ] Update **Project Outline** section
