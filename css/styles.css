@@ -158,8 +158,8 @@ button{
     position: fixed;                                /* fixed/sticky position */
     bottom: 20px;                                   /* place button at bottom of page */
     right: 30px;                                    /* place button 30px from the right */
-    width: 60px;
-    height: 60px;
+    width: 60px;                                    /* make button 60px wide */
+    height: 60px;                                   /* make button 60px tall */
     z-index: 99;                                    /* Make sure it does not overlap */
     border: none;                                   /* Remove borders */
     outline: none;                                  /* Remove outline */
