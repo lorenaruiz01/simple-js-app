@@ -158,16 +158,19 @@ button{
     position: fixed;                                /* fixed/sticky position */
     bottom: 20px;                                   /* place button at bottom of page */
     right: 30px;                                    /* place button 30px from the right */
+    width: 60px;
+    height: 60px;
     z-index: 99;                                    /* Make sure it does not overlap */
     border: none;                                   /* Remove borders */
     outline: none;                                  /* Remove outline */
     background-color: rgb(86, 80, 125);           /* Set a background color */
     color: white;                                 /* Text color */
+    font-family: 'Montserrat', sans-serif;          /* Add fontfamily */
+    font-size: 24px;                                /* Increase font size */
     cursor: pointer;                                /* Add a mouse pointer on hover */
     padding: 15px;                                  /* Some padding */
     border-radius: 100%;                            /* Rounded corners */
-    font-size: 24px;                                /* Increase font size */
-    font-family: 'Montserrat', sans-serif;          /* Add fontfamily */
+    
 }
 
 #back2TopBtn:hover {
