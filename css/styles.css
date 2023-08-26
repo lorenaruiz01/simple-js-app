@@ -165,7 +165,7 @@ button{
     outline: none;                                  /* Remove outline */
     background-color: rgb(248, 207, 84);          /* Set a background color */
     color: rgb(0,3,97);                           /* Text color */
-    font-family: 'Lora', serif;                     /* Add fontfamily */
+    font-family: 'Dosis', sans-serif;                     /* Add fontfamily */
     font-weight: 700;                               /* Add font weight */
     font-size: 24px;                                /* Increase font size */
     cursor: pointer;                                /* Add a mouse pointer on hover */
