@@ -165,12 +165,12 @@ button{
     outline: none;                                  /* Remove outline */
     background-color: rgb(86, 80, 125);           /* Set a background color */
     color: white;                                 /* Text color */
-    font-family: 'Montserrat', sans-serif;          /* Add fontfamily */
+    font-family: 'Lora', serif;                     /* Add fontfamily */
     font-size: 24px;                                /* Increase font size */
     cursor: pointer;                                /* Add a mouse pointer on hover */
-    padding: 15px;                                  /* Some padding */
+    padding: 5px;                                  /* Some padding */
     border-radius: 100%;                            /* Rounded corners */
-    
+    box-shadow: 4px 4px 4px 4px #888888;
 }
 
 #back2TopBtn:hover {
