@@ -166,11 +166,10 @@ button{
     background-color: rgb(248, 207, 84);          /* Set a background color */
     color: rgb(0,3,97);                           /* Text color */
     font-family: 'Dosis', sans-serif;               /* Add fontfamily */
-    font-size: 24px;                                /* Increase font size */
+    font-size: 100px;                                /* Increase font size */
     cursor: pointer;                                /* Add a mouse pointer on hover */
     padding: 9px 5px 5px 5px;                       /* Some padding */
     border-radius: 100%;                            /* Rounded corners */
-    /* box-shadow: 4px 4px 4px #888888; */
 }
 
 #back2TopBtn:hover {
