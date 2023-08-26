@@ -168,7 +168,7 @@ button{
     font-family: 'Dosis', sans-serif;               /* Add fontfamily */
     font-size: 24px;                                /* Increase font size */
     cursor: pointer;                                /* Add a mouse pointer on hover */
-    padding: 9px 5px 5px 5px;                                   /* Some padding */
+    padding: 9px 5px 5px 5px;                       /* Some padding */
     border-radius: 100%;                            /* Rounded corners */
     /* box-shadow: 4px 4px 4px #888888; */
 }
