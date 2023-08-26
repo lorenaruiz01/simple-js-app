@@ -176,4 +176,5 @@ button{
 #back2TopBtn:hover {
     background-color:rgb(0,3,97);                  /* Add a dark-grey background on hover */
     color: rgb(248, 207, 84);                      /* Text color */
+    box-shadow: 2px 2px 2px #888888;
 }
