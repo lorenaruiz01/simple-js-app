@@ -14,6 +14,7 @@
 - [x] ~~Add 'back to top' button with HTML, CSS, and JS~~
 - [ ] Add cache code to loadList function (or loadDetails function?)
 - [ ] Implement bootstrap and jQuery
+- [ ] Hide back to top button when modal is showing 
 - [ ] \(Extra) Implement slides for front and back images inside modal
 - [ ] \(Extra) Add 'abilities' section with a 'See more/See less' event handler
 - [ ] \(Extra) Add more generations of pokemon?
