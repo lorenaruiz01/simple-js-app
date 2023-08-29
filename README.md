@@ -8,8 +8,8 @@
 
 ## To Do: 
 - [x] ~~Fix logo image to show up on page from github~~
-- [ ] Center modal to center of screen
-- [ ] Move Close button in modal to top right of modal
+- [x] Center modal to center of screen
+- [x] Move Close button in modal to top right of modal
 - [ ] Add 'esc' key close event to listItem event listener
 - [x] ~~Add 'back to top' button with HTML, CSS, and JS~~
 - [ ] Add cache code to loadList function (or loadDetails function?)
