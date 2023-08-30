@@ -12,14 +12,6 @@ let pokemonRepository = (function () {                                    // wra
   }
 
 
-  
-  
-
-//   function showDetails (pokemon) {
-//           loadDetails(pokemon);
-//        }
-
-
   function loadList() {
       return fetch(apiUrl).then(function(response) {
           return response.json();
