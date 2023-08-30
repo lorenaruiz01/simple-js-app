@@ -17,7 +17,7 @@ let pokemonRepository = (function () {                                    // wra
     let pokemonList = document.querySelector('.pokemon-list');            // assign ul element to pokemonList array,
     
     let listItem = document.createElement('li');                          // create an li element
-    listItem.classList.add('pokemon-list-item');                          // add 'pokemon-list-item' class to button
+    listItem.classList.add('pokemon-list-item');                          // add 'pokemon-list-item' class to list item (pokemon card button)
     listItem.innerHTML =  ` 
                               <img src=${pokemon.image}>                                  
                               <h2>#${pokemon.id} ${pokemon.name}</h2>
