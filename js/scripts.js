@@ -1,9 +1,9 @@
-let pokemonRepository = (function () {                                  // wrapping pokemonList array inside of an IIFE (Immediately Invoked Function Expression)
-  let pokemonList = [];                                                 // an empty array of pokemon objects
+let pokemonRepository = (function () {                                    // wrapping pokemonList array inside of an IIFE (Immediately Invoked Function Expression)
+  let pokemonList = [];                                                   // an empty array of pokemon objects
 
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=151';
 
-  function add (pokemon) {                                               // the add function adds the selected pokemon to the array
+  function add (pokemon) {                                                // the add function adds the selected pokemon to the array
       pokemonList.push(pokemon)
   }
 
@@ -154,16 +154,16 @@ let pokemonRepository = (function () {                                  // wrapp
 }) ();                                                                    // the (); makes this a self-executing function
 
 
-pokemonRepository.loadList().then(function() {
+pokemonRepository.loadList().then(function() {                            //                    
   pokemonRepository.getAll().forEach(function (pokemon) {
       pokemonRepository.addListItem(pokemon);
   }); 
 });
 
                                         
-let back2TopBtn = document.getElementById("back2TopBtn");               // Get the button
+let back2TopBtn = document.getElementById("back2TopBtn");                 // Get the button
 
-window.onscroll = function() {                                          // When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {                                            // When the user scrolls down 20px from the top of the document, show the button
     scrollFunction()
 }; 
 
