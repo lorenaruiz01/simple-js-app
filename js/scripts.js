@@ -154,7 +154,7 @@ let pokemonRepository = (function () {                                    // wra
 }) ();                                                                    // the (); makes this a self-executing function
 
 
-pokemonRepository.loadList().then(function() {                            //                    
+pokemonRepository.loadList().then(function() {                            // runs the loadList function for each pokemon and adds a list item to the page                   
   pokemonRepository.getAll().forEach(function (pokemon) {
       pokemonRepository.addListItem(pokemon);
   }); 
