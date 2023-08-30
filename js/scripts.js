@@ -163,11 +163,11 @@ pokemonRepository.loadList().then(function() {                            // run
                                         
 let back2TopBtn = document.getElementById("back2TopBtn");                 // Get the back to top button
 
-window.onscroll = function() {                                            // When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {                                            // When the user scrolls, run scrollFunction 
     scrollFunction()
 }; 
 
-function scrollFunction(){
+function scrollFunction(){                                                // When the user scrolls down 20px from the top of the document, show the button
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
         back2TopBtn.style.display = "block";
     } else {
