@@ -24,13 +24,13 @@ let pokemonRepository = (function () {                                    // wra
                           `                                               // add the pokemon's image, number, and name to the button
     pokemonList.appendChild(listItem);                                    // add listItem pokemon button to pokemonList
     listItem.addEventListener('click', () => {                            // show pokemon details when user clicks on pokemon button
-      showDetails (pokemon)
+      loadDetails (pokemon)
   })
 }
 
-  function showDetails (pokemon) {
-          loadDetails(pokemon);
-       }
+//   function showDetails (pokemon) {
+//           loadDetails(pokemon);
+//        }
 
 
   function loadList() {
