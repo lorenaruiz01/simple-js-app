@@ -5,15 +5,6 @@ let pokemonRepository = (function () {                                  // wrapp
 
   function add (pokemon) {                                               // the add function adds the selected pokemon to the array
       pokemonList.push(pokemon)
-  //   if (typeof pokemon === 'object' &&                                // checks whether pokemon is an object
-  //     'name' in pokemon &&                                            // checks that pokemon object includes name key 
-  //     'height' in pokemon &&                                          // checks that pokemon object includes height key
-  //     'types' in pokemon                                              // checks that pokemon object includes types key
-  // ) {
-  //   pokemonList.push(pokemon);
-  // } else {
-  //   console.log('pokemon cannot be pushed to pokemonList');
-  // }                                                                   // for some reason, the pokemon is not pushed if I uncommment this if-else conditiona statement
   }
 
   function getAll () {                                                    // the getAll function returns all items in the pokemonList array
