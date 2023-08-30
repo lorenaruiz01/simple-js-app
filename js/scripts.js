@@ -48,11 +48,11 @@ let pokemonRepository = (function () {                                    // wra
 
   const pokeCache = {};                                                   // use this to store chached pokemon information 
 
-  function handleModal(pokemonDetails){
-    pokemon.imageUrl = pokemonDetails.sprites.front_default;
-    pokemon.imageUrlBack = pokemonDetails.sprites.back_default;
-    pokemon.height = pokemonDetails.height;
-    pokemon.types = pokemonDetails.types.map( (type) => type.type.name).join(', ');
+  function dataForModal(pokemon){
+    pokemon.imageUrl = pokemon.sprites.front_default;
+    pokemon.imageUrlBack = pokemon.sprites.back_default;
+    pokemon.height = pokemon.height;
+    pokemon.types = pokemon.types.map( (type) => type.type.name).join(', ');
     showModal(pokemon);
   }
 
@@ -60,7 +60,7 @@ let pokemonRepository = (function () {                                    // wra
       let url = pokemon.detailsUrl;
       if (pokeCache[url]) {
         console.log('cache item found',pokeCache[url])
-        handleModal(pokeCache[url])
+        dataForModal(pokeCache[url])
         return 
       } 
       return fetch(url).then(function(response){
@@ -68,7 +68,7 @@ let pokemonRepository = (function () {                                    // wra
       }).then(function(details) {
         pokeCache[url] = details
         console.log(pokeCache)
-        handleModal(details)
+        dataForModal(details)
       }).catch(function(e){
           console.error(e);
       });
