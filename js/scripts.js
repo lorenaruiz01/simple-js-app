@@ -20,7 +20,6 @@ let pokemonRepository = (function () {                                  // wrapp
     return pokemonList;
   }
 
-  const pokeCache = {};                                                   // use this to store chached pokemon information 
 
   
   function addListItem(pokemon) {                                         // the addListItem function adds a pokemon as a list item and button
@@ -75,19 +74,29 @@ let pokemonRepository = (function () {                                  // wrapp
   }
 
 
+  const pokeCache = {};                                                   // use this to store chached pokemon information 
 
+  function handleModal(pokemonDetails){
+    pokemon.imageUrl = pokemonDetails.sprites.front_default;
+    pokemon.imageUrlBack = pokemonDetails.sprites.back_default;
+    pokemon.height = pokemonDetails.height;
+    pokemon.types = pokemonDetails.types.map( (type) => type.type.name).join(', ');
+    showModal(pokemon);
+  }
 
   function loadDetails(pokemon) {
       let url = pokemon.detailsUrl;
+      if (pokeCache[url]) {
+        console.log('cache item found',pokeCache[url])
+        handleModal(pokeCache[url])
+        return 
+      } 
       return fetch(url).then(function(response){
           return response.json();
       }).then(function(details) {
-          //pokemon details
-          pokemon.imageUrl = details.sprites.front_default;
-          pokemon.imageUrlBack = details.sprites.back_default;
-          pokemon.height = details.height;
-          pokemon.types = details.types.map( (type) => type.type.name).join(', ');
-          showModal(pokemon);
+        pokeCache[url] = details
+        console.log(pokeCache)
+        handleModal(details)
       }).catch(function(e){
           console.error(e);
       });
@@ -107,7 +116,7 @@ let pokemonRepository = (function () {                                  // wrapp
 
       let closeButtonElement = document.createElement('button');          // create a button element
       closeButtonElement.classList.add('modal-close');                    // add class of modal-close to newly created button
-      closeButtonElement.innerText = 'X';                             // set inner text of button to 'Close'
+      closeButtonElement.innerText = 'X';                                 // set inner text of button to 'Close'
       closeButtonElement.addEventListener('click', hideModal);            // hide modal when user clicks button    
 
       
