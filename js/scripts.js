@@ -41,7 +41,7 @@ let pokemonRepository = (function () {                                    // wra
                               <h2>#${pokemon.id} ${pokemon.name}</h2>
                           `                                               // add the pokemon's image, number, and name to the button
     pokemonList.appendChild(listItem);                                    // add listItem pokemon button to pokemonList
-    listItem.addEventListener('click', () => {                            // show pokemon details when user clicks on pokemon button
+    listItem.addEventListener('click', () => {                            // load pokemon details when user clicks on pokemon button
       loadDetails (pokemon)
   })
 }
