@@ -10,7 +10,7 @@
 - [x] ~~Fix logo image to show up on page from github~~
 - [x] ~~Center modal to center of screen~~
 - [x] ~~Move Close button in modal to top right of modal~~
-- [ ] Add 'esc' key close event to listItem event listener
+- [x] ~~Add 'esc' key close event to listItem event listener~~
 - [x] ~~Add 'back to top' button with HTML, CSS, and JS~~
 - [x] ~~Add cache code to loadDetails function ~~
 - [ ] Implement bootstrap and jQuery
