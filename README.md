@@ -14,7 +14,8 @@
 - [x] ~~Add 'back to top' button with HTML, CSS, and JS~~
 - [x] ~~Add cache code to loadDetails function ~~
 - [ ] Implement bootstrap and jQuery
-- [ ] Hide back to top button when modal is showing 
+- [ ] Hide back to top button when modal is showing
+- [ ] smooth scroll on scroll to top
 - [ ] Add favicon to tab
 - [ ] \(Extra) Implement slides for front and back images inside modal
 - [ ] \(Extra) Add 'abilities' section with a 'See more/See less' event handler
