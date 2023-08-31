@@ -95,7 +95,7 @@ p {
 }
 
 img {
-    height: 180px;
+    height: 150px;
     margin: 0 auto;
 }
 
@@ -120,6 +120,11 @@ button{
     font-size: 16px;
     border-radius: 3px;
     transition: transform 100ms;
+}
+
+.modal-img {
+    height: 300px;
+    margin: 0 auto;
 }
 
 .pokemon-card > .modal-close{
