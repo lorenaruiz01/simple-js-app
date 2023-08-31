@@ -61,7 +61,7 @@ function loadDetails(pokemon) {
         return response.json();
     }).then(function(details) {
       pokeCache[url] = details
-      console.log(pokeCache)
+      console.log(details)
       dataForModal(details)
     }).catch(function(e){
         console.error(e);
