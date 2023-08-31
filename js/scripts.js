@@ -12,25 +12,6 @@ let pokemonRepository = (function () {                                    // wra
   }
 
 
-  function loadList() {
-      return fetch(apiUrl).then(function(response) {
-          return response.json();
-      }).then (function (json) {
-          json.results.forEach(function(item, index){
-              let pokemon = {
-                  name: item.name,
-                  id: index + 1,
-                  image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index +1}.png`,
-                  detailsUrl: item.url
-              };
-              add(pokemon);
-          }); 
-      }).catch(function (e){
-          console.error(e);
-      })
-  }
-
-
   function addListItem(pokemon) {                                         // the addListItem function adds a pokemon as a list item and button (via a click event)
     let pokemonList = document.querySelector('.pokemon-list');            // assign ul element to pokemonList array,
     
@@ -46,33 +27,60 @@ let pokemonRepository = (function () {                                    // wra
   })
 }
 
-  const pokeCache = {};                                                   // use this to store chached pokemon information 
 
-  function dataForModal(pokemon){
-    pokemon.imageUrl = pokemon.sprites.front_default;
-    pokemon.imageUrlBack = pokemon.sprites.back_default;
-    pokemon.height = pokemon.height;
-    pokemon.types = pokemon.types.map( (type) => type.type.name).join(', ');
+
+function loadList() {
+    return fetch(apiUrl).then(function(response) {
+        return response.json();
+    }).then (function (json) {
+        json.results.forEach(function(item, index){
+            let pokemon = {
+                name: item.name,
+                id: index + 1,
+                image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index +1}.png`,
+                detailsUrl: item.url
+            };
+            add(pokemon);
+        }); 
+    }).catch(function (e){
+        console.error(e);
+    })
+}
+
+const pokeCache = {};                                                   // use this to store chached pokemon information 
+
+
+function loadDetails(pokemon) {
+    let url = pokemon.detailsUrl;
+    if (pokeCache[url]) {
+      console.log('cache item found',pokeCache[url])
+      dataForModal(pokeCache[url])
+      return 
+    } 
+    return fetch(url).then(function(response){
+        return response.json();
+    }).then(function(details) {
+      pokeCache[url] = details
+      console.log(pokeCache)
+      dataForModal(details)
+    }).catch(function(e){
+        console.error(e);
+    });
+}
+
+
+  function dataForModal(details){
+    let pokemon = { 
+    name : details.name,
+    id: details.id,
+    imageUrl : details.sprites.front_default,
+    imageUrlBack : details.sprites.back_default,
+    height : details.height,
+    types : details.types.map( (type) => type.type.name).join(', ')
+}
     showModal(pokemon);
   }
 
-  function loadDetails(pokemon) {
-      let url = pokemon.detailsUrl;
-      if (pokeCache[url]) {
-        console.log('cache item found',pokeCache[url])
-        dataForModal(pokeCache[url])
-        return 
-      } 
-      return fetch(url).then(function(response){
-          return response.json();
-      }).then(function(details) {
-        pokeCache[url] = details
-        console.log(pokeCache)
-        dataForModal(details)
-      }).catch(function(e){
-          console.error(e);
-      });
-  }
 
   // Displays the modal with pokemon details
   function showModal(pokemon) {
@@ -141,6 +149,7 @@ let pokemonRepository = (function () {                                    // wra
     loadList: loadList,
     loadDetails: loadDetails,
     addListItem: addListItem, 
+    dataForModal: dataForModal,
     showModal: showModal,
     hideModal: hideModal
   }
