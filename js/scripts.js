@@ -132,6 +132,11 @@ function loadDetails(pokemon) {
           if (target === modalContainer) {                                // only close it if the user clicks directly on the overlay
               hideModal();
           };
+      });
+      document.addEventListener('keydown', (event) => {                   // close event added to document closes modal when user presses the Esc key
+        if (event.key === 'Escape') {
+            hideModal();
+          }
       })
 
   }
