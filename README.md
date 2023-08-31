@@ -12,11 +12,12 @@
 - [x] ~~Move Close button in modal to top right of modal~~
 - [x] ~~Add 'esc' key close event to listItem event listener~~
 - [x] ~~Add 'back to top' button with HTML, CSS, and JS~~
+- [x] ~~implement smooth scroll behavior on scroll to top~~
 - [x] ~~Add cache code to loadDetails function ~~
-- [ ] Implement bootstrap and jQuery
 - [ ] Hide back to top button when modal is showing
-- [x] ~~smooth scroll on scroll to top~~
 - [ ] Add favicon to tab
+- [ ] Implement bootstrap and jQuery
+- [ ] Install ES Lint and Prettier
 - [ ] \(Extra) Implement slides for front and back images inside modal
 - [ ] \(Extra) Add 'abilities' section with a 'See more/See less' event handler
 - [ ] \(Extra) Add more generations of pokemon?
