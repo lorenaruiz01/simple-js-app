@@ -131,8 +131,8 @@ let pokemonRepository = (function () {
     pokemonCard.appendChild(contentElement);
     pokemonCard.appendChild(typesElement);
 
-    modal.appendChild(pokemonCard); // add pokemon card to modal
-    modalContainer.appendChild(modal); // add modal to modal container
+    modal.appendChild(pokemonCard);
+    modalContainer.appendChild(modal);
 
     modalContainer.classList.add("is-visible");
     modalContainer.addEventListener("click", (e) => {
