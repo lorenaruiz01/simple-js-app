@@ -136,15 +136,12 @@ let pokemonRepository = (function () {
 
     modalContainer.classList.add("is-visible");
     modalContainer.addEventListener("click", (e) => {
-      // since this is also triggered when clicking inside the modal,
       let target = e.target;
       if (target === modalContainer) {
-        // only close it if the user clicks directly on the overlay
         hideModal();
       }
     });
     document.addEventListener("keydown", (event) => {
-      // close event added to document closes modal when user presses the Esc key
       if (event.key === "Escape") {
         hideModal();
       }
