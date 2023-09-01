@@ -10,21 +10,22 @@ let pokemonRepository = (function () {
     pokemonList.push(pokemon);
   }
 
-// returns all items in the pokemonList array
+  // returns all items in the pokemonList array
   function getAll() {
     return pokemonList;
   }
 
+  //adds a pokemon as a list item and button (via a click event)
   function addListItem(pokemon) {
-    // the addListItem function adds a pokemon as a list item and button (via a click event)
-    let pokemonList = document.querySelector(".pokemon-list"); // assign ul element to pokemonList array,
 
-    let listItem = document.createElement("li"); // create an li element
-    listItem.classList.add("pokemon-list-item"); // add 'pokemon-list-item' class to list item (pokemon card button)
+    let pokemonList = document.querySelector(".pokemon-list"); 
+
+    let listItem = document.createElement("li"); 
+    listItem.classList.add("pokemon-list-item"); 
     listItem.innerHTML = ` 
                               <img src=${pokemon.image}>                                  
                               <h2>#${pokemon.id} ${pokemon.name}</h2>
-                          `; // add the pokemon's image, number, and name to the button
+                          `;
     pokemonList.appendChild(listItem); // add listItem pokemon button to pokemonList
     listItem.addEventListener("click", () => {
       // load pokemon details when user clicks on pokemon button
