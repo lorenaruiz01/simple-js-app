@@ -55,7 +55,8 @@ let pokemonRepository = (function () {
       });
   }
 
-  const pokeCache = {}; // use this to store chached pokemon information
+  // use this to store chached pokemon information
+  const pokeCache = {}; 
 
   function loadDetails(pokemon) {
     let url = pokemon.detailsUrl;
