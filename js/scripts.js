@@ -110,19 +110,19 @@ let pokemonRepository = (function () {
     let titleElement = document.createElement("h2");
     titleElement.innerText = `#${pokemon.id} ${pokemon.name}`;
 
-    let imageElement = document.createElement("img"); // creates element to hold image
-    imageElement.classList.add("modal-img"); // add modal-img class to modal
-    imageElement.src = pokemon.imageUrl; // link pokemon image to modal
+    let imageElement = document.createElement("img");
+    imageElement.classList.add("modal-img");
+    imageElement.src = pokemon.imageUrl;
 
     let imageElementBack = document.createElement("img");
     imageElementBack.classList.add("modal-img");
     imageElementBack.src = pokemon.imageUrlBack;
 
-    let contentElement = document.createElement("p"); // create a new paragraph element within modal
-    contentElement.innerText = "Height: " + pokemon.height + "m"; // concatenate height details
+    let contentElement = document.createElement("p");
+    contentElement.innerText = "Height: " + pokemon.height + "m";
 
     let typesElement = document.createElement("p");
-    typesElement.innerText = "Types: " + pokemon.types; // create new paragraph element within modal
+    typesElement.innerText = "Types: " + pokemon.types;
 
     pokemonCard.appendChild(closeButtonElement); // add close button to modal
     pokemonCard.appendChild(titleElement); // add pokemon name to modal
