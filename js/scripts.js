@@ -124,12 +124,12 @@ let pokemonRepository = (function () {
     let typesElement = document.createElement("p");
     typesElement.innerText = "Types: " + pokemon.types;
 
-    pokemonCard.appendChild(closeButtonElement); // add close button to modal
-    pokemonCard.appendChild(titleElement); // add pokemon name to modal
-    pokemonCard.appendChild(imageElement); // add pokemon image to modal
-    pokemonCard.appendChild(imageElementBack); // add pokemon second image to modal
-    pokemonCard.appendChild(contentElement); // add pokemon height to modal
-    pokemonCard.appendChild(typesElement); // add pokemon types to modal
+    pokemonCard.appendChild(closeButtonElement);
+    pokemonCard.appendChild(titleElement);
+    pokemonCard.appendChild(imageElement);
+    pokemonCard.appendChild(imageElementBack);
+    pokemonCard.appendChild(contentElement);
+    pokemonCard.appendChild(typesElement);
 
     modal.appendChild(pokemonCard); // add pokemon card to modal
     modalContainer.appendChild(modal); // add modal to modal container
