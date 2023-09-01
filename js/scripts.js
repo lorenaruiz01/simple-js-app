@@ -102,13 +102,13 @@ let pokemonRepository = (function () {
     let pokemonCard = document.createElement("div");
     pokemonCard.classList.add("pokemon-card");
 
-    let closeButtonElement = document.createElement("button"); // create a button element
-    closeButtonElement.classList.add("modal-close"); // add class of modal-close to newly created button
-    closeButtonElement.innerText = "X"; // set inner text of button to 'Close'
-    closeButtonElement.addEventListener("click", hideModal); // hide modal when user clicks button
+    let closeButtonElement = document.createElement("button");
+    closeButtonElement.classList.add("modal-close");
+    closeButtonElement.innerText = "X";
+    closeButtonElement.addEventListener("click", hideModal);
 
-    let titleElement = document.createElement("h2"); // create a title element for modal
-    titleElement.innerText = `#${pokemon.id} ${pokemon.name}`; // add pokemon name to modal title
+    let titleElement = document.createElement("h2");
+    titleElement.innerText = `#${pokemon.id} ${pokemon.name}`;
 
     let imageElement = document.createElement("img"); // creates element to hold image
     imageElement.classList.add("modal-img"); // add modal-img class to modal
