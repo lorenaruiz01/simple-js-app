@@ -1,172 +1,169 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: rgb(86, 80, 125);
-    color: white;
-    font-family: 'Lato', sans-serif;
-    font-size: 16px;
-  }
+  background-color: rgb(86, 80, 125);
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+}
 
 .heading {
-    display: grid;
-    text-align: center;
-    align-content: center;
+  display: grid;
+  text-align: center;
+  align-content: center;
 }
 
 .pokemon-list-item {
-    background-color: lavender;
-    border: none;
-    border-radius: 20px;
-    padding: 40px;
-    margin: 4px 2px;
-    color: black;
-    text-transform: capitalize;
-    font-size: 32px;
-    text-decoration: none;
-    text-align: center;
-    display: grid;
-    align-items: center;
-    list-style-type: none;
+  background-color: lavender;
+  border: none;
+  border-radius: 20px;
+  padding: 40px;
+  margin: 4px 2px;
+  color: black;
+  text-transform: capitalize;
+  font-size: 32px;
+  text-decoration: none;
+  text-align: center;
+  display: grid;
+  align-items: center;
+  list-style-type: none;
 }
 
 .pokemon-list-item:hover {
-    animation: grow-and-shrink 0.6s ;
-    cursor: pointer;
+  animation: grow-and-shrink 0.6s;
+  cursor: pointer;
 }
 
 .is-visible {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    background: rgba(117, 117, 117, 0.94);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(117, 117, 117, 0.94);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.modal {   
-    position:relative;
-    display:grid;
-    justify-content: center;
-    align-items: center;
-    
+.modal {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
 
 .pokemon-card {
-    background-color: lavender;
-    border: none;
-    border-radius: 20px;
-    padding: 40px;
-    margin: 4px 2px;
-    align-items: center;
+  background-color: lavender;
+  border: none;
+  border-radius: 20px;
+  padding: 40px;
+  margin: 4px 2px;
+  align-items: center;
 }
 
-
 @keyframes grow-and-shrink {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-    100% {
-        transform: scale(1);
-    }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 h2 {
-    text-transform: capitalize;
-    font-size: 32px;
-    font-weight: normal;
-    margin-top: 0;
-    color: black;
-    text-align: center;
+  text-transform: capitalize;
+  font-size: 32px;
+  font-weight: normal;
+  margin-top: 0;
+  color: black;
+  text-align: center;
 }
 
 p {
-    font-weight: lighter;
-    color: black;
-    margin-top: 5px;
-    margin-bottom: 5px; 
+  font-weight: lighter;
+  color: black;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 img {
-    height: 150px;
-    margin: 0 auto;
+  height: 150px;
+  margin: 0 auto;
 }
 
-
-ul {   
-    padding-inline-start: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: 20px;
+ul {
+  padding-inline-start: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 20px;
 }
 
 .container {
-    padding: 40px;
-    margin: 0 auto;
+  padding: 40px;
+  margin: 0 auto;
 }
 
-button{
-    background-color: lavender;
-    padding: 5px 5px;
-    border: none;
-    color: black;
-    font-size: 16px;
-    border-radius: 3px;
-    transition: transform 100ms;
+button {
+  background-color: lavender;
+  padding: 5px 5px;
+  border: none;
+  color: black;
+  font-size: 16px;
+  border-radius: 3px;
+  transition: transform 100ms;
 }
 
 .modal-img {
-    height: 300px;
-    margin: 0 auto;
+  height: 300px;
+  margin: 0 auto;
 }
 
-.pokemon-card > .modal-close{
-    display: flex;
-    justify-content: flex-end;
+.pokemon-card > .modal-close {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .modal-close {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    font-family: 'Lato', sans-serif;
-    font-weight: lighter;
-  }
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-family: "Lato", sans-serif;
+  font-weight: lighter;
+}
 
 .modal-close:hover {
-   cursor: pointer;
-   transform: translateY(-1px);
-   box-shadow: 0px 1px 2px rgb(199, 199, 213);
+  cursor: pointer;
+  transform: translateY(-1px);
+  box-shadow: 0px 1px 2px rgb(199, 199, 213);
 }
 
 #back2TopBtn {
-    display: none;                                  /* hidden by default */
-    position: fixed;                                /* fixed/sticky position */
-    bottom: 20px;                                   /* place button at bottom of page */
-    right: 30px;                                    /* place button 30px from the right */
-    width: 60px;                                    /* make button 60px wide */
-    height: 60px;                                   /* make button 60px tall */
-    z-index: 99;                                    /* Make sure it does not overlap */
-    border: none;                                   /* Remove borders */
-    outline: none;                                  /* Remove outline */
-    background-color: rgb(248, 207, 84);          /* Set a background color */
-    color: rgb(0,3,97);                           /* Text color */
-    font-family: 'Dosis', sans-serif;               /* Add fontfamily */
-    font-size: 62px;                                /* Increase font size */
-    cursor: pointer;                                /* Add a mouse pointer on hover */
-    padding: 5px 5px 5px 5px;                       /* Some padding */
-    border-radius: 100%;                            /* Rounded corners */
+  display: none; /* hidden by default */
+  position: fixed; /* fixed/sticky position */
+  bottom: 20px; /* place button at bottom of page */
+  right: 30px; /* place button 30px from the right */
+  width: 60px; /* make button 60px wide */
+  height: 60px; /* make button 60px tall */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: rgb(248, 207, 84); /* Set a background color */
+  color: rgb(0, 3, 97); /* Text color */
+  font-family: "Dosis", sans-serif; /* Add fontfamily */
+  font-size: 62px; /* Increase font size */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 5px 5px 5px 5px; /* Some padding */
+  border-radius: 100%; /* Rounded corners */
 }
 
 #back2TopBtn:hover {
-    background-color:rgb(0,3,97);                  /* Add a dark-grey background on hover */
-    color: rgb(248, 207, 84);                      /* Text color */
-    /* box-shadow: 2px 2px 2px #888888; */
+  background-color: rgb(0, 3, 97); /* Add a dark-grey background on hover */
+  color: rgb(248, 207, 84); /* Text color */
+  /* box-shadow: 2px 2px 2px #888888; */
 }
