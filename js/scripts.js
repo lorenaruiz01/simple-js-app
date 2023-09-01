@@ -94,10 +94,10 @@ let pokemonRepository = (function () {
   // Displays the modal with pokemon details
   function showModal(pokemon) {
     let modalContainer = document.querySelector("#modal-container");
-    modalContainer.innerHTML = ""; // clears existing modal content
+    modalContainer.innerHTML = "";
 
-    let modal = document.createElement("div"); // creates new div to hold modal with pokemon info
-    modal.classList.add("modal"); // adds class of pokemon-list-item to newly created div
+    let modal = document.createElement("div"); 
+    modal.classList.add("modal");
 
     let pokemonCard = document.createElement("div");
     pokemonCard.classList.add("pokemon-card");
