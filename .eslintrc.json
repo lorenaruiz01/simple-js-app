@@ -1,13 +1,18 @@
 {
     "env": {
-        "browser": true,
-        "es2021": true
+        "es6": true,
+        "browser": true
     },
-    "extends": "eslint:recommended",
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
-    },
+    "extends": [ "eslint:recommended", "airbnb", "prettier"],
     "rules": {
+        "prettier/prettier": "error",
+        "quotes": ["error", "single"],
+        "tabWidth": 4,
+        "semi": 0,
+        "singleQuote": true, 
+        "printWidth": 80, 
+        "no-console": "off",
+        "func-names": "off"
     }
+    
 }
