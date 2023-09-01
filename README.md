@@ -15,7 +15,8 @@
 - [x] ~~implement smooth scroll behavior on scroll to top~~
 - [x] ~~Add cache code to loadDetails function ~~
 - [ ] Hide back to top button when modal is showing
-- [ ] Add favicon to tab
+- [ ] Hide pokemon card after click to close/esc modal,
+- [x] ~~Add favicon to tab~~
 - [ ] Implement bootstrap and jQuery
 - [ ] Install ES Lint and Prettier
 - [ ] \(Extra) Implement slides for front and back images inside modal
