@@ -123,6 +123,8 @@ function loadDetails(pokemon) {
       pokemonCard.appendChild(imageElementBack);                          // add pokemon second image to modal
       pokemonCard.appendChild(contentElement);                            // add pokemon height to modal
       pokemonCard.appendChild(typesElement);                              // add pokemon types to modal
+    
+      modal.classList.add('is-visible');    
       modal.appendChild(pokemonCard);                                     // add pokemon card to modal
       modalContainer.appendChild(modal);                                  // add modal to modal container
       
@@ -144,6 +146,8 @@ function loadDetails(pokemon) {
   function hideModal() {
       let modalContainer = document.querySelector('#modal-container');
       modalContainer.classList.remove('is-visible'); 
+      let modal = document.querySelector('.modal');
+      modal.classList.remove('is-visible');
 
   }
 
