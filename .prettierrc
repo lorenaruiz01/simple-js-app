@@ -1,7 +1,19 @@
 {
-    "trailingComma": "es5",
-    "tabWidth": 4,
-    "semi": false,
-    "singleQuote": true, 
-    "printWidth": 80
+    "env": {
+        "es6": true,
+        "browser": true
+    },
+    "extends": [ "eslint:recommended", "airbnb", "prettier"],
+    "rules": {
+        "prettier/prettier": "error",
+        "quotes": ["error", "single"],
+        "trailingComma": "es5",
+        "tabWidth": 4,
+        "semi": false,
+        "singleQuote": true, 
+        "printWidth": 80, 
+        "no-console": "off",
+        "func-names": "off"
+    }
+    
 }
