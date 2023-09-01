@@ -1,6 +1,7 @@
+// wrap pokemonList array inside of an IIFE (Immediately Invoked Function Expression)
 let pokemonRepository = (function () {
-  // wrapping pokemonList array inside of an IIFE (Immediately Invoked Function Expression)
-  let pokemonList = []; // an empty array of pokemon objects
+
+    let pokemonList = []; // an empty array of pokemon objects
 
   let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=151";
 
