@@ -17,8 +17,8 @@
 - [x] ~~Add 'esc' key close event to listItem event listener~~
 - [x] ~~Add 'back to top' button with HTML, CSS, and JS~~
 - [x] ~~implement smooth scroll behavior on scroll to top~~
-- [x] ~~Add cache code to loadDetails function ~~
-- [ ] Hide back to top button when modal is showing
+- [x] ~~Add cache code to loadDetails function~~
+- [x] ~~Hide back to top button when modal is showing~~
 - [x] ~~Hide pokemon card after click to close/esc modal~~
 - [x] ~~Add favicon to tab~~
 - [ ] Implement bootstrap and jQuery
