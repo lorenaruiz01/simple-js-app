@@ -89,6 +89,8 @@ let pokemonRepository = (function () {
       types: details.types.map((type) => type.type.name).join(", "),
     };
     showModal(pokemon);
+    let back2TopBtn = document.getElementById("back2TopBtn");
+    back2TopBtn.remove("#back2TopBtn");
   }
 
   // Displays the modal with pokemon details
@@ -190,6 +192,10 @@ function scrollFunction() {
     back2TopBtn.style.display = "none";
   }
 }
+
+// pseudocode: 
+// if modal-container is showing
+// hide back to top button
 
 function backToTopFunction() {
   // When the user clicks on the button, scroll to the top of the document
