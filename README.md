@@ -2,9 +2,13 @@
 
 ## Project Outline 
 1. Project description
-2. How to get the project running
-3. Project dependencies (e.g., JavaScript version, ESLint rules)
-4. Which API the project uses
+
+2. [API used] (https://pokeapi.co/api/v2/pokemon/?limit=151)
+
+3. Project dependencies 
+    - JavaScript 
+    - ESLint
+    - Prettier
 
 ## To Do: 
 - [x] ~~Fix logo image to show up on page from github~~
@@ -22,4 +26,4 @@
 - [ ] \(Extra) Implement slides for front and back images inside modal
 - [ ] \(Extra) Add 'abilities' section with a 'See more/See less' event handler
 - [ ] \(Extra) Add more generations of pokemon?
-- [ ] Update **Project Outline** section
+- [x] ~~Update **Project Outline** section~~
