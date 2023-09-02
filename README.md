@@ -3,7 +3,7 @@
 ## Project Outline 
 1. Project description
 
-2. [API used] (https://pokeapi.co/api/v2/pokemon/?limit=151)
+2. [API used](https://pokeapi.co/api/v2/pokemon/)
 
 3. Project dependencies 
     - JavaScript 
