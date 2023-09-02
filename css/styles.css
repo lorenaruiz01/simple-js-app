@@ -53,6 +53,7 @@ body {
   display: grid;
   justify-content: center;
   align-items: center;
+  display: block;
 }
 
 .pokemon-card {
