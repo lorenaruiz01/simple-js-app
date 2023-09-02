@@ -6,4 +6,6 @@ js/promise-polyfill.js
 
 .eslintrc.json
 
+.vscode/settings.json
+
 README.md
