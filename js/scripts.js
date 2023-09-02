@@ -90,7 +90,7 @@ let pokemonRepository = (function () {
     };
     showModal(pokemon);
     let back2TopBtn = document.getElementById("back2TopBtn");
-    back2TopBtn.style="display:none";
+    back2TopBtn.style.display = "none";
   }
 
   // Displays the modal with pokemon details
@@ -156,7 +156,7 @@ let pokemonRepository = (function () {
     let modalCard = document.querySelector(".modal > *");
     modalCard.remove(".modal > *");
     let back2TopBtn = document.getElementById("back2TopBtn");
-    back2TopBtn.style="display:block";
+    back2TopBtn.style.display = "block";
 }
 
   return {
