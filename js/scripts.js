@@ -89,6 +89,8 @@ let pokemonRepository = (function () {
       types: details.types.map((type) => type.type.name).join(", "),
     };
     showModal(pokemon);
+    let back2TopBtn = document.getElementById("back2TopBtn");
+    back2TopBtn.style="display:none";
   }
 
   // Displays the modal with pokemon details
@@ -153,7 +155,9 @@ let pokemonRepository = (function () {
     modalContainer.classList.remove("is-visible");
     let modalCard = document.querySelector(".modal > *");
     modalCard.remove(".modal > *");
-  }
+    let back2TopBtn = document.getElementById("back2TopBtn");
+    back2TopBtn.style="display:block";
+}
 
   return {
     // this returns an object with the value of the getAll and the add function
