@@ -89,8 +89,6 @@ let pokemonRepository = (function () {
       types: details.types.map((type) => type.type.name).join(", "),
     };
     showModal(pokemon);
-    let back2TopBtn = document.getElementById("back2TopBtn");
-    back2TopBtn.remove("#back2TopBtn");
   }
 
   // Displays the modal with pokemon details
