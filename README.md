@@ -7,7 +7,7 @@
 
 3. Project dependencies 
     - JavaScript 
-    - ESLint
+    - [ESLint](.eslintrc.json)
     - Prettier
 
 ## To Do: 
