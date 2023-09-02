@@ -15,10 +15,10 @@
 - [x] ~~implement smooth scroll behavior on scroll to top~~
 - [x] ~~Add cache code to loadDetails function ~~
 - [ ] Hide back to top button when modal is showing
-- [ ] Hide pokemon card after click to close/esc modal,
+- [x] ~~Hide pokemon card after click to close/esc modal~~
 - [x] ~~Add favicon to tab~~
 - [ ] Implement bootstrap and jQuery
-- [ ] Install ES Lint and Prettier
+- [x] ~~Install ES Lint and Prettier~~
 - [ ] \(Extra) Implement slides for front and back images inside modal
 - [ ] \(Extra) Add 'abilities' section with a 'See more/See less' event handler
 - [ ] \(Extra) Add more generations of pokemon?
