@@ -156,11 +156,14 @@ let pokemonRepository = (function () {
     });
   }
 
+  // hides modal and its content from view
   function hideModal() {
     let modalContainer = document.querySelector("#modal-container");
     modalContainer.classList.remove("is-visible");
     let modalCard = document.querySelector(".modal > *");
     modalCard.remove(".modal > *");
+    
+    // displays back to top button when modal is hidden
     let back2TopBtn = document.getElementById("back2TopBtn");
     back2TopBtn.style.display = "block";
 }
