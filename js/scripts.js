@@ -79,6 +79,7 @@ let pokemonRepository = (function () {
       });
   }
 
+  // creates a pokemon object with specified details 
   function dataForModal(details) {
     let pokemon = {
       name: details.name,
@@ -88,7 +89,9 @@ let pokemonRepository = (function () {
       height: details.height,
       types: details.types.map((type) => type.type.name).join(", "),
     };
+    // activates showModal function and passes in pokemon object
     showModal(pokemon);
+    // hides back to top button when showModal function runs
     let back2TopBtn = document.getElementById("back2TopBtn");
     back2TopBtn.style.display = "none";
   }
