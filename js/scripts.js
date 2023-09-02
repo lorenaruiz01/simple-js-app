@@ -151,6 +151,8 @@ let pokemonRepository = (function () {
   function hideModal() {
     let modalContainer = document.querySelector("#modal-container");
     modalContainer.classList.remove("is-visible");
+    let modalCard = document.querySelector(".modal > *");
+    modalCard.remove(".modal > *");
   }
 
   return {
