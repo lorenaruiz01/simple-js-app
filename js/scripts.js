@@ -1,7 +1,7 @@
 // wrap pokemonList array inside of an IIFE (Immediately Invoked Function Expression)
 let pokemonRepository = (function () {
 
-    let pokemonList = []; 
+  let pokemonList = []; 
 
   let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=151";
 
@@ -32,6 +32,7 @@ let pokemonRepository = (function () {
     });
   }
 
+  // fetches data and creates pokemon object with specific details, activates add() function
   function loadList() {
     return fetch(apiUrl)
       .then(function (response) {
@@ -58,6 +59,7 @@ let pokemonRepository = (function () {
   // use this to store chached pokemon information
   const pokeCache = {}; 
 
+  // fetches and stores details into pokeCahce 
   function loadDetails(pokemon) {
     let url = pokemon.detailsUrl;
     if (pokeCache[url]) {
@@ -166,12 +168,12 @@ let pokemonRepository = (function () {
     // displays back to top button when modal is hidden
     let back2TopBtn = document.getElementById("back2TopBtn");
     back2TopBtn.style.display = "block";
-}
+  }
 
+  // A key calls a function and returns the value of the same name (key : value)
   return {
-    // this returns an object with the value of the getAll and the add function
-    getAll: getAll, // getAll: is the key that calls the function and returns the value of the same name (key : value)
-    add: add, // add: is the key that calls the function and returns the value of the same name (key : value)
+    getAll: getAll, 
+    add: add, 
     loadList: loadList,
     loadDetails: loadDetails,
     addListItem: addListItem,
@@ -179,7 +181,7 @@ let pokemonRepository = (function () {
     showModal: showModal,
     hideModal: hideModal,
   };
-})(); // the (); makes this a self-executing function
+})(); // the (); makes the IFFE a self-executing function
 
 pokemonRepository.loadList().then(function () {
   // runs the loadList function for each pokemon and adds a list item to the page
