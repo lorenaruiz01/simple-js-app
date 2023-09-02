@@ -140,12 +140,15 @@ let pokemonRepository = (function () {
     modalContainer.appendChild(modal);
 
     modalContainer.classList.add("is-visible");
+    
+    // adds a click event on modal container to hide modal
     modalContainer.addEventListener("click", (e) => {
       let target = e.target;
       if (target === modalContainer) {
         hideModal();
       }
     });
+    // adds an esc keydown event on modal container to hide modal
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") {
         hideModal();
