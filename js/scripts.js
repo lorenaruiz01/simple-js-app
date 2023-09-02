@@ -190,7 +190,8 @@ pokemonRepository.loadList().then(function () {
   });
 });
 
-let back2TopBtn = document.getElementById("back2TopBtn"); // Get the back to top button
+// Get the back to top button
+let back2TopBtn = document.getElementById("back2TopBtn"); 
 
 window.onscroll = function () {
   // When the user scrolls, run scrollFunction
@@ -206,14 +207,7 @@ function scrollFunction() {
   }
 }
 
-// pseudocode: 
-// if modal-container is showing
-// hide back to top button
-
 function backToTopFunction() {
   // When the user clicks on the button, scroll to the top of the document
   window.scrollTo({ top: 0, behavior: "smooth" });
-
-  //document.body.scrollTop = 0;                                          // For Safari
-  //document.documentElement.scrollTop = 0;                               // For Chrome, Firefox, IE and Opera
 }
