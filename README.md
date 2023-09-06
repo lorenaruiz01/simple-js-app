@@ -27,3 +27,4 @@
 - [ ] \(Extra) Add 'abilities' section with a 'See more/See less' event handler
 - [ ] \(Extra) Add more generations of pokemon?
 - [x] ~~Update **Project Outline** section~~
+- [] update readme
