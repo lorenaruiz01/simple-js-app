@@ -31,3 +31,4 @@
 - [] add github profile link
 - [] add linkedin link
 - [] add website
+- [] link to github repo
