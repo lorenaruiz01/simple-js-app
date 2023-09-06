@@ -29,3 +29,4 @@
 - [x] ~~Update **Project Outline** section~~
 - [] update readme
 - [] add github profile link
+- [] add linkedin link
