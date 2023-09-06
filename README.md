@@ -30,3 +30,4 @@
 - [] update readme
 - [] add github profile link
 - [] add linkedin link
+- [] add website
