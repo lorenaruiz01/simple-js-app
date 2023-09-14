@@ -5,7 +5,7 @@ A simple JavaScript application showing the first 151 Pokemon.
 ## Table of Contents 
 - [Features](#features)
 - [Demo](#demo)
-- [Installation](#installation)
+- [Project Dependencies](#projectdependencies)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
