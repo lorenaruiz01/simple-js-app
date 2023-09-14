@@ -20,16 +20,16 @@ A simple JavaScript application showing the first 151 Pokemon.
 - close the modal using the close button (top right), clicking outside of the modal, or pressing the esc key
      (insert modal action video here)
 
+
+
 ## Demo
 
 [Check out a live demo of my app here!](https://lorenaruiz01.github.io/simple-js-app/)
 
-## Installation
-
-Project dependencies 
-    - JavaScript 
-    - ESLint
-    - Prettier
+## Project dependencies
+- JavaScript 
+- ESLint
+- Prettier
 
 ## Usage 
 
@@ -37,9 +37,10 @@ Project dependencies
 
 ## Contributing
 
+See an issue? Contribute [here](https://github.com/lorenaruiz01/simple-js-app/issues)
 
 ## License
 
-[Used API from pokeapi.co](https://pokeapi.co/api/v2/pokemon/)
+API used is from [pokeapi.co](https://pokeapi.co/api/v2/pokemon/)
 
 
