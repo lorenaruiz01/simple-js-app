@@ -16,12 +16,13 @@ A simple JavaScript application showing the first 151 Pokemon.
     (insert scroll action video here)
 - hovering over a card will grow and shrink the card
     (insert hover action video here)
-- view detailed information about each pokemon by clicking any card
+- view detailed information about each pokemon by clicking the card
 - close the modal using the close button (top right), clicking outside of the modal, or pressing the esc key
      (insert modal action video here)
 
 ## Demo
 
+[Check out a live demo of my app here!](https://lorenaruiz01.github.io/simple-js-app/)
 
 ## Installation
 
