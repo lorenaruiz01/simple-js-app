@@ -33,7 +33,7 @@ A simple JavaScript application showing the first 151 Pokemon.
 
 ## Usage 
 
-
+Use this app to see explore various Pokemon and their details, get inspiration for your next project, or share with another pokemon fan! 
 
 ## Contributing
 
