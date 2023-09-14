@@ -12,7 +12,8 @@
         "singleQuote": true, 
         "printWidth": 80, 
         "no-console": "off",
-        "func-names": "off"
+        "func-names": "off", 
+        "prefer-const": "error"
     }
     
 }
