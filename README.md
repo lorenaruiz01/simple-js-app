@@ -19,7 +19,7 @@ A simple JavaScript application showing the first 151 Pokemon.
 - view detailed information about each pokemon by clicking the card
 - close the modal using the close button (top right), clicking outside of the modal, or pressing the esc key
      (insert modal action video here)
-
+- cache feature allows the pokemon details in the modal to load faster next time you click on the pokemon.
 
 
 ## Demo
