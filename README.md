@@ -5,7 +5,7 @@ A simple JavaScript application showing the first 151 Pokemon.
 ## Table of Contents 
 - [Features](#features)
 - [Demo](#demo)
-- [Project Dependencies](#projectdependencies)
+- [Dependencies](#dependencies)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
@@ -26,7 +26,7 @@ A simple JavaScript application showing the first 151 Pokemon.
 
 [Check out a live demo of my app here!](https://lorenaruiz01.github.io/simple-js-app/)
 
-## Project dependencies
+## Dependencies
 - JavaScript 
 - ESLint
 - Prettier
