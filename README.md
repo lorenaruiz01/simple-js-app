@@ -24,6 +24,8 @@ A simple JavaScript application showing the first 151 Pokemon.
 ## Usage 
 
 
+## Contributing
+
 
 
 
