@@ -4,11 +4,11 @@ A simple JavaScript application showing the first 151 Pokemon.
 
 ## Table of Contents 
 - [Features](#features)
-- [Demo]
-- [Installation]
-- [Usage]
-- [Contributing]
-- [License]
+- [Demo](#demo)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
 2. [Used API from pokeapi.co](https://pokeapi.co/api/v2/pokemon/)
 
