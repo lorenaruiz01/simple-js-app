@@ -20,8 +20,13 @@ A simple JavaScript application showing the first 151 Pokemon.
 
 ## Installation
 
-
+Project dependencies 
+    - JavaScript 
+    - ESLint
+    - Prettier
+    
 ## Usage 
+
 
 
 ## Contributing
@@ -31,7 +36,4 @@ A simple JavaScript application showing the first 151 Pokemon.
 
 [Used API from pokeapi.co](https://pokeapi.co/api/v2/pokemon/)
 
-Project dependencies 
-    - JavaScript 
-    - ESLint
-    - Prettier
+
