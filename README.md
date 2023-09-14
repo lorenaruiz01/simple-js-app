@@ -10,12 +10,10 @@ A simple JavaScript application showing the first 151 Pokemon.
 - [Contributing](#contributing)
 - [License](#license)
 
-2. [Used API from pokeapi.co](https://pokeapi.co/api/v2/pokemon/)
+## Features
 
-3. Project dependencies 
-    - JavaScript 
-    - ESLint
-    - Prettier
+- 
+
 
 ## To Do: 
 - [x] ~~Fix logo image to show up on page from github~~
@@ -39,3 +37,11 @@ A simple JavaScript application showing the first 151 Pokemon.
 - [] add linkedin link
 - [] add website
 - [] link to github repo
+
+
+2. [Used API from pokeapi.co](https://pokeapi.co/api/v2/pokemon/)
+
+3. Project dependencies 
+    - JavaScript 
+    - ESLint
+    - Prettier
