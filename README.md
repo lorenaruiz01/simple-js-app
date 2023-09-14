@@ -1,4 +1,4 @@
-# Work In Progress: simple-js-app (Pokedex)
+# Pokedex Application
 
 ## Project Outline 
 1. Project description
