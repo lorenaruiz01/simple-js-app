@@ -1,7 +1,12 @@
 # Pokedex Application
 
-## Project Outline 
-1. Project description
+## Table of Contents 
+- Features
+- Demo
+- Installation
+- Usage
+- Contributing
+- License
 
 2. [Used API from pokeapi.co](https://pokeapi.co/api/v2/pokemon/)
 
