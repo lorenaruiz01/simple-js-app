@@ -1,5 +1,7 @@
 # Pokedex Application
 
+A simple JavaScript application showing the first 151 Pokemon.
+
 ## Table of Contents 
 - Features
 - Demo
