@@ -13,6 +13,7 @@ A simple JavaScript application showing the first 151 Pokemon.
 ## Features
 - easily scroll using your track pad, mouse, or up/down arrow keys on your keyboard
 - click the back to top button (bottom right) to scroll to the top
+- hovering over a card will grow and shrink the card
 - view detailed information about each pokemon by clicking any card
 - close the modal using the close button (top right), clicking outside of the modal, or pressing the esc key
 
