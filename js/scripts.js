@@ -26,6 +26,7 @@ const pokemonRepository = (function () {
                           `
     pokemonList.appendChild(listItem)
     listItem.addEventListener('click', () => {
+      // eslint-disable-next-line no-use-before-define
       loadDetails(pokemon)
     })
   }
@@ -64,9 +65,7 @@ const pokemonRepository = (function () {
       return
     }
     return fetch(url)
-      .then((response) => {
-        return response.json()
-      })
+      .then((response) => response.json())
       .then((details) => {
         pokeCache[url] = details
         console.log(details)
