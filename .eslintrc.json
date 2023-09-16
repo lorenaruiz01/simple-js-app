@@ -5,15 +5,7 @@
     },
     "extends": [ "eslint:recommended", "airbnb", "prettier"],
     "rules": {
-        "prettier/prettier": "error",
-        "quotes": ["error", "single"],
-        "tabWidth": 2,
-        "semi": 0,
-        "singleQuote": true, 
-        "printWidth": 80, 
-        "no-console": "off",
-        "func-names": "off", 
-        "prefer-const": "error"
+        
     }
     
 }
