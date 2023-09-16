@@ -1,8 +1,8 @@
 // wrap pokemonList array inside of an IIFE (Immediately Invoked Function Expression)
-let pokemonRepository = (function () {
-  let pokemonList = []
+const pokemonRepository = (function () {
+  const pokemonList = []
 
-  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=151'
+  const apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=151'
 
   // adds the selected pokemon to the array
   function add(pokemon) {
@@ -14,11 +14,11 @@ let pokemonRepository = (function () {
     return pokemonList
   }
 
-  //adds a pokemon as a list item and button (via a click event)
+  // adds a pokemon as a list item and button (via a click event)
   function addListItem(pokemon) {
-    let pokemonList = document.querySelector('.pokemon-list')
+    const pokemonList = document.querySelector('.pokemon-list')
 
-    let listItem = document.createElement('li')
+    const listItem = document.createElement('li')
     listItem.classList.add('pokemon-list-item')
     listItem.innerHTML = ` 
                               <img src=${pokemon.image}>                                  
@@ -33,12 +33,10 @@ let pokemonRepository = (function () {
   // fetches data and creates pokemon object with specific details, activates add() function
   function loadList() {
     return fetch(apiUrl)
-      .then(function (response) {
-        return response.json()
-      })
-      .then(function (json) {
-        json.results.forEach(function (item, index) {
-          let pokemon = {
+      .then((response) => response.json())
+      .then((json) => {
+        json.results.forEach((item, index) => {
+          const pokemon = {
             name: item.name,
             id: index + 1,
             image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${
@@ -49,7 +47,7 @@ let pokemonRepository = (function () {
           add(pokemon)
         })
       })
-      .catch(function (e) {
+      .catch((e) => {
         console.error(e)
       })
   }
@@ -59,29 +57,29 @@ let pokemonRepository = (function () {
 
   // fetches and stores details into pokeCahce
   function loadDetails(pokemon) {
-    let url = pokemon.detailsUrl
+    const url = pokemon.detailsUrl
     if (pokeCache[url]) {
       console.log('cache item found', pokeCache[url])
       dataForModal(pokeCache[url])
       return
     }
     return fetch(url)
-      .then(function (response) {
+      .then((response) => {
         return response.json()
       })
-      .then(function (details) {
+      .then((details) => {
         pokeCache[url] = details
         console.log(details)
         dataForModal(details)
       })
-      .catch(function (e) {
+      .catch((e) => {
         console.error(e)
       })
   }
 
   // creates a pokemon object with specified details
   function dataForModal(details) {
-    let pokemon = {
+    const pokemon = {
       name: details.name,
       id: details.id,
       imageUrl: details.sprites.front_default,
@@ -92,41 +90,41 @@ let pokemonRepository = (function () {
     // activates showModal function and passes in pokemon object
     showModal(pokemon)
     // hides back to top button when showModal function runs
-    let back2TopBtn = document.getElementById('back2TopBtn')
+    const back2TopBtn = document.getElementById('back2TopBtn')
     back2TopBtn.style.display = 'none'
   }
 
   // Displays the modal with pokemon details
   function showModal(pokemon) {
-    let modalContainer = document.querySelector('#modal-container')
+    const modalContainer = document.querySelector('#modal-container')
     modalContainer.innerHTML = ''
 
-    let modal = document.createElement('div')
+    const modal = document.createElement('div')
     modal.classList.add('modal')
 
-    let pokemonCard = document.createElement('div')
+    const pokemonCard = document.createElement('div')
     pokemonCard.classList.add('pokemon-card')
 
-    let closeButtonElement = document.createElement('button')
+    const closeButtonElement = document.createElement('button')
     closeButtonElement.classList.add('modal-close')
     closeButtonElement.innerText = 'X'
     closeButtonElement.addEventListener('click', hideModal)
 
-    let titleElement = document.createElement('h2')
+    const titleElement = document.createElement('h2')
     titleElement.innerText = `#${pokemon.id} ${pokemon.name}`
 
-    let imageElement = document.createElement('img')
+    const imageElement = document.createElement('img')
     imageElement.classList.add('modal-img')
     imageElement.src = pokemon.imageUrl
 
-    let imageElementBack = document.createElement('img')
+    const imageElementBack = document.createElement('img')
     imageElementBack.classList.add('modal-img')
     imageElementBack.src = pokemon.imageUrlBack
 
-    let contentElement = document.createElement('p')
+    const contentElement = document.createElement('p')
     contentElement.innerText = 'Height: ' + pokemon.height + 'm'
 
-    let typesElement = document.createElement('p')
+    const typesElement = document.createElement('p')
     typesElement.innerText = 'Types: ' + pokemon.types
 
     pokemonCard.appendChild(closeButtonElement)
@@ -143,7 +141,7 @@ let pokemonRepository = (function () {
 
     // adds a click event on modal container to hide modal
     modalContainer.addEventListener('click', (e) => {
-      let target = e.target
+      const target = e.target
       if (target === modalContainer) {
         hideModal()
       }
@@ -158,13 +156,13 @@ let pokemonRepository = (function () {
 
   // hides modal and its content from view
   function hideModal() {
-    let modalContainer = document.querySelector('#modal-container')
+    const modalContainer = document.querySelector('#modal-container')
     modalContainer.classList.remove('is-visible')
-    let modalCard = document.querySelector('.modal > *')
+    const modalCard = document.querySelector('.modal > *')
     modalCard.style.display = 'none'
 
     // displays back to top button when modal is hidden
-    let back2TopBtn = document.getElementById('back2TopBtn')
+    const back2TopBtn = document.getElementById('back2TopBtn')
     back2TopBtn.style.display = 'block'
   }
 
@@ -181,15 +179,15 @@ let pokemonRepository = (function () {
   }
 })() // the (); makes the IFFE a self-executing function
 
-pokemonRepository.loadList().then(function () {
+pokemonRepository.loadList().then(() => {
   // runs the loadList function for each pokemon and adds a list item to the page
-  pokemonRepository.getAll().forEach(function (pokemon) {
+  pokemonRepository.getAll().forEach((pokemon) => {
     pokemonRepository.addListItem(pokemon)
   })
 })
 
 // Get the back to top button
-let back2TopBtn = document.getElementById('back2TopBtn')
+const back2TopBtn = document.getElementById('back2TopBtn')
 
 window.onscroll = function () {
   // When the user scrolls, run scrollFunction
