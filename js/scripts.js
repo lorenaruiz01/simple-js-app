@@ -128,10 +128,10 @@ const pokemonRepository = (function () {
     imageElementBack.src = pokemon.imageUrlBack
 
     const contentElement = document.createElement('p')
-    contentElement.innerText = 'Height: ' + pokemon.height + 'm'
+    contentElement.innerText = `Height: ${  pokemon.height  }m`
 
     const typesElement = document.createElement('p')
-    typesElement.innerText = 'Types: ' + pokemon.types
+    typesElement.innerText = `Types: ${  pokemon.types}`
 
     pokemonCard.appendChild(closeButtonElement)
     pokemonCard.appendChild(titleElement)
