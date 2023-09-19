@@ -64,6 +64,7 @@ const pokemonRepository = (function () {
   function loadDetails(pokemon) {
     const url = pokemon.detailsUrl
     if (pokeCache[url]) {
+      // eslint-disable-next-line no-console
       console.log('cache item found', pokeCache[url])
       // eslint-disable-next-line no-use-before-define
       dataForModal(pokeCache[url])
