@@ -213,6 +213,7 @@ function scrollFunction() {
   }
 }
 
+// eslint-disable-next-line no-unused-vars
 function backToTopFunction() {
   // When the user clicks on the button, scroll to the top of the document
   window.scrollTo({ top: 0, behavior: 'smooth' })
