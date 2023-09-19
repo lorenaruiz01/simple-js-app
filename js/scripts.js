@@ -154,6 +154,7 @@ const pokemonRepository = (function () {
     // adds an esc keydown event on modal container to hide modal
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape') {
+        // eslint-disable-next-line no-use-before-define
         hideModal()
       }
     })
