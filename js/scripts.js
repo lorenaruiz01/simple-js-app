@@ -111,6 +111,7 @@ const pokemonRepository = (function () {
     const closeButtonElement = document.createElement('button')
     closeButtonElement.classList.add('modal-close')
     closeButtonElement.innerText = 'X'
+    // eslint-disable-next-line no-use-before-define
     closeButtonElement.addEventListener('click', hideModal)
 
     const titleElement = document.createElement('h2')
