@@ -1,3 +1,4 @@
+/* eslint-disable object-shorthand */
 // wrap pokemonList array inside of an IIFE (Immediately Invoked Function Expression)
 const pokemonRepository = (function () {
   const pokemonList = []
