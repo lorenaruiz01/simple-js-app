@@ -64,6 +64,7 @@ const pokemonRepository = (function () {
       dataForModal(pokeCache[url])
       return
     }
+    // eslint-disable-next-line consistent-return
     return fetch(url)
       .then((response) => response.json())
       .then((details) => {
