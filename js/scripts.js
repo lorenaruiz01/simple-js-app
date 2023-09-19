@@ -147,6 +147,7 @@ const pokemonRepository = (function () {
 
     // adds a click event on modal container to hide modal
     modalContainer.addEventListener('click', (e) => {
+      // eslint-disable-next-line prefer-destructuring
       const target = e.target
       if (target === modalContainer) {
         // eslint-disable-next-line no-use-before-define
