@@ -17,6 +17,7 @@ const pokemonRepository = (function () {
 
   // adds a pokemon as a list item and button (via a click event)
   function addListItem(pokemon) {
+    // eslint-disable-next-line no-shadow
     const pokemonList = document.querySelector('.pokemon-list')
 
     const listItem = document.createElement('li')
