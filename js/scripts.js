@@ -81,6 +81,7 @@ const pokemonRepository = (function () {
         dataForModal(details)
       })
       .catch((e) => {
+        // eslint-disable-next-line no-console
         console.error(e)
       })
   }
