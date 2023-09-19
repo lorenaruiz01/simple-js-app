@@ -197,6 +197,7 @@ const back2TopBtn = document.getElementById('back2TopBtn')
 
 window.onscroll = function () {
   // When the user scrolls, run scrollFunction
+  // eslint-disable-next-line no-use-before-define
   scrollFunction()
 }
 
