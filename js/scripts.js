@@ -87,6 +87,7 @@ const pokemonRepository = (function () {
       types: details.types.map((type) => type.type.name).join(', '),
     }
     // activates showModal function and passes in pokemon object
+    // eslint-disable-next-line no-use-before-define
     showModal(pokemon)
     // hides back to top button when showModal function runs
     const back2TopBtn = document.getElementById('back2TopBtn')
