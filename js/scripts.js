@@ -71,6 +71,7 @@ const pokemonRepository = (function () {
       .then((details) => {
         pokeCache[url] = details
         console.log(details)
+        // eslint-disable-next-line no-use-before-define
         dataForModal(details)
       })
       .catch((e) => {
