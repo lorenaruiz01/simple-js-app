@@ -198,6 +198,7 @@ pokemonRepository.loadList().then(() => {
 // Get the back to top button
 const back2TopBtn = document.getElementById('back2TopBtn')
 
+// eslint-disable-next-line func-names
 window.onscroll = function () {
   // When the user scrolls, run scrollFunction
   // eslint-disable-next-line no-use-before-define
